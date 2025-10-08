@@ -29,20 +29,20 @@ namespace languageFlashCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.MouseClick += Form1_NextWord;
             string path = @"C:\code\languageFlashCards\data\french_words.json";
             string json = File.ReadAllText(path);
             _words = JsonSerializer.Deserialize<List<WordPair>>(json);
 
-            // First label is French prompt (label1)
             label1.Font = new Font(label1.Font.FontFamily, 24);
             label1.TextAlign = ContentAlignment.MiddleCenter;
 
-            // Collect option labels (label2..label10)
+            // Add click event to label1 too
+            label1.Click += Global_Click;
+
             _optionLabels.AddRange(new[]
             {
-                label2,label3,label4,label5,label6,label7,label8,label9,label10
-            });
+        label2,label3,label4,label5,label6,label7,label8,label9,label10
+    });
 
             foreach (var lbl in _optionLabels)
             {
@@ -50,8 +50,18 @@ namespace languageFlashCards
                 lbl.Click += Option_Click;
             }
 
+            // Form click
+            this.Click += Global_Click;
+
             ShowNextWord();
         }
+
+        private void Global_Click(object sender, EventArgs e)
+        {
+            if (!isClicked) return;
+            ShowNextWord();
+        }
+
 
         private void ShowNextWord()
         {
@@ -79,10 +89,12 @@ namespace languageFlashCards
 
                 _optionLabels[i].Text = _words[idx].english;
             }
+            isClicked = false;
         }
 
         private void Option_Click(object sender, EventArgs e)
         {
+            if (isClicked) ShowNextWord(); // Prevent multiple clicks   
             isClicked = true;
             var clicked = sender as Label;
             if (clicked == null) return;
@@ -96,12 +108,6 @@ namespace languageFlashCards
                 _correctLabel.BackColor = Color.LightGreen;
                 clicked.BackColor = Color.LightCoral;
             }
-        }
-
-        private void Form1_NextWord(object sender, MouseEventArgs e)
-        {
-            if (!isClicked) return;
-            ShowNextWord();
         }
     }
 }
