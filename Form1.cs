@@ -21,6 +21,7 @@ namespace languageFlashCards
         private Label _correctLabel;
         private List<Label> _optionLabels = new List<Label>();
         private Boolean isClicked = false;
+        private Color defaultColor = Color.Olive;
 
         public Form1()
         {
@@ -43,8 +44,9 @@ namespace languageFlashCards
 
             foreach (var lbl in _optionLabels)
             {
-                lbl.BackColor = SystemColors.Control;
+                lbl.BackColor = defaultColor;
                 lbl.Click += Option_Click;
+                lbl.DoubleClick += Option_Click;
             }
 
             // Form click
@@ -63,7 +65,7 @@ namespace languageFlashCards
         private void ShowNextWord()
         {
             foreach (var lbl in _optionLabels)
-                lbl.BackColor = SystemColors.Control;
+                lbl.BackColor = defaultColor;
 
             // Pick random word
             _currentWord = _words[_rand.Next(_words.Count)];
