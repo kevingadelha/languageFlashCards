@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Text.Json;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace languageFlashCards
@@ -11,8 +11,9 @@ namespace languageFlashCards
     {
         private class WordPair
         {
-            public string french { get; set; }
-            public string english { get; set; }
+            public string japanese { get; set; }
+            public string pronunciation { get; set; }
+            public string translation { get; set; }
         }
 
         private List<WordPair> _words;
@@ -20,7 +21,7 @@ namespace languageFlashCards
         private WordPair _currentWord;
         private Label _correctLabel;
         private List<Label> _optionLabels = new List<Label>();
-        private Boolean isClicked = false;
+        private bool isClicked = false;
         private Color defaultColor = Color.Olive;
 
         public Form1()
@@ -30,17 +31,15 @@ namespace languageFlashCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string path = @"C:\code\languageFlashCards\data\french_words.json";
-            string json = File.ReadAllText(path);
-            _words = JsonSerializer.Deserialize<List<WordPair>>(json);
+            string path = @"C:\code\languageFlashCards\data\3000 common JP words - All.tsv";
+            _words = LoadTsv(path);
 
-            // Add click event to label1 too
             label1.Click += Global_Click;
 
             _optionLabels.AddRange(new[]
             {
-        label2,label3,label4,label5,label6,label7,label8,label9,label10
-    });
+                label2,label3,label4,label5,label6,label7,label8,label9,label10
+            });
 
             foreach (var lbl in _optionLabels)
             {
@@ -49,10 +48,32 @@ namespace languageFlashCards
                 lbl.DoubleClick += Option_Click;
             }
 
-            // Form click
             this.Click += Global_Click;
 
             ShowNextWord();
+        }
+
+        private List<WordPair> LoadTsv(string path)
+        {
+            var lines = File.ReadAllLines(path);
+            var list = new List<WordPair>();
+
+            // Skip header line
+            foreach (var line in lines.Skip(1))
+            {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var parts = line.Split('\t');
+                if (parts.Length < 5) continue; // #, week, day, japanese, pronunciation, translation...
+
+                var wp = new WordPair
+                {
+                    japanese = parts[3].Trim(),
+                    pronunciation = parts[4].Trim(),
+                    translation = parts[5].Trim()
+                };
+                list.Add(wp);
+            }
+            return list;
         }
 
         private void Global_Click(object sender, EventArgs e)
@@ -61,22 +82,18 @@ namespace languageFlashCards
             ShowNextWord();
         }
 
-
         private void ShowNextWord()
         {
             foreach (var lbl in _optionLabels)
                 lbl.BackColor = defaultColor;
 
-            // Pick random word
             _currentWord = _words[_rand.Next(_words.Count)];
-            label1.Text = _currentWord.french;
+            label1.Text = _currentWord.japanese;
 
-            // Pick correct position
             int correctIndex = _rand.Next(_optionLabels.Count);
             _correctLabel = _optionLabels[correctIndex];
-            _correctLabel.Text = _currentWord.english;
+            _correctLabel.Text = $"{_currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{_currentWord.translation}";
 
-            // Fill others with random wrong answers
             var used = new HashSet<int> { correctIndex };
             for (int i = 0; i < _optionLabels.Count; i++)
             {
@@ -84,10 +101,11 @@ namespace languageFlashCards
 
                 int idx;
                 do { idx = _rand.Next(_words.Count); }
-                while (_words[idx].english == _currentWord.english);
+                while (_words[idx].japanese == _currentWord.japanese);
 
-                _optionLabels[i].Text = _words[idx].english;
+                _optionLabels[i].Text = $"{_words[idx].pronunciation}{Environment.NewLine}{Environment.NewLine}{_words[idx].translation}";
             }
+
             isClicked = false;
         }
 
@@ -95,7 +113,7 @@ namespace languageFlashCards
         {
             if (isClicked)
             {
-                ShowNextWord(); // Prevent multiple clicks   
+                ShowNextWord();
                 return;
             }
             isClicked = true;

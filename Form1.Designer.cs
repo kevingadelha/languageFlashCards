@@ -48,7 +48,7 @@
             // 
             label1.BackColor = Color.Olive;
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 100F);
+            label1.Font = new Font("Segoe UI", 200F);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Size = new Size(775, 1002);
@@ -61,7 +61,7 @@
             label2.BackColor = Color.Olive;
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 30F);
+            label2.Font = new Font("Segoe UI", 24F);
             label2.Location = new Point(3, 0);
             label2.Name = "label2";
             label2.Size = new Size(252, 332);
@@ -74,7 +74,7 @@
             label3.BackColor = Color.Olive;
             label3.BorderStyle = BorderStyle.FixedSingle;
             label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI", 30F);
+            label3.Font = new Font("Segoe UI", 24F);
             label3.Location = new Point(261, 0);
             label3.Name = "label3";
             label3.Size = new Size(252, 332);
@@ -87,7 +87,7 @@
             label4.BackColor = Color.Olive;
             label4.BorderStyle = BorderStyle.FixedSingle;
             label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Segoe UI", 30F);
+            label4.Font = new Font("Segoe UI", 24F);
             label4.Location = new Point(519, 0);
             label4.Name = "label4";
             label4.Size = new Size(254, 332);
@@ -100,7 +100,7 @@
             label5.BackColor = Color.Olive;
             label5.BorderStyle = BorderStyle.FixedSingle;
             label5.Dock = DockStyle.Fill;
-            label5.Font = new Font("Segoe UI", 30F);
+            label5.Font = new Font("Segoe UI", 24F);
             label5.Location = new Point(3, 332);
             label5.Name = "label5";
             label5.Size = new Size(252, 332);
@@ -113,7 +113,7 @@
             label6.BackColor = Color.Olive;
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Dock = DockStyle.Fill;
-            label6.Font = new Font("Segoe UI", 30F);
+            label6.Font = new Font("Segoe UI", 24F);
             label6.Location = new Point(261, 332);
             label6.Name = "label6";
             label6.Size = new Size(252, 332);
@@ -126,7 +126,7 @@
             label7.BackColor = Color.Olive;
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Dock = DockStyle.Fill;
-            label7.Font = new Font("Segoe UI", 30F);
+            label7.Font = new Font("Segoe UI", 24F);
             label7.Location = new Point(519, 332);
             label7.Name = "label7";
             label7.Size = new Size(254, 332);
@@ -139,7 +139,7 @@
             label8.BackColor = Color.Olive;
             label8.BorderStyle = BorderStyle.FixedSingle;
             label8.Dock = DockStyle.Fill;
-            label8.Font = new Font("Segoe UI", 30F);
+            label8.Font = new Font("Segoe UI", 24F);
             label8.Location = new Point(3, 664);
             label8.Name = "label8";
             label8.Size = new Size(252, 332);
@@ -152,7 +152,7 @@
             label9.BackColor = Color.Olive;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Dock = DockStyle.Fill;
-            label9.Font = new Font("Segoe UI", 30F);
+            label9.Font = new Font("Segoe UI", 24F);
             label9.Location = new Point(261, 664);
             label9.Name = "label9";
             label9.Size = new Size(252, 332);
@@ -165,7 +165,7 @@
             label10.BackColor = Color.Olive;
             label10.BorderStyle = BorderStyle.FixedSingle;
             label10.Dock = DockStyle.Fill;
-            label10.Font = new Font("Segoe UI", 30F);
+            label10.Font = new Font("Segoe UI", 24F);
             label10.Location = new Point(519, 664);
             label10.Name = "label10";
             label10.Size = new Size(254, 332);
