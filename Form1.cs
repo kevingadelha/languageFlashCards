@@ -33,9 +33,6 @@ namespace languageFlashCards
             string json = File.ReadAllText(path);
             _words = JsonSerializer.Deserialize<List<WordPair>>(json);
 
-            label1.Font = new Font(label1.Font.FontFamily, 24);
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-
             // Add click event to label1 too
             label1.Click += Global_Click;
 
@@ -94,7 +91,11 @@ namespace languageFlashCards
 
         private void Option_Click(object sender, EventArgs e)
         {
-            if (isClicked) ShowNextWord(); // Prevent multiple clicks   
+            if (isClicked)
+            {
+                ShowNextWord(); // Prevent multiple clicks   
+                return;
+            }
             isClicked = true;
             var clicked = sender as Label;
             if (clicked == null) return;
