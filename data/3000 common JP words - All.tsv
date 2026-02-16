@@ -62,7 +62,7 @@
 61	1	7	住む	sumu	live, reside	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 62	1	7	働く	hataraku	work	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 63	1	7	難しい	muzukashii	difficult	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
-64	1	7	先生	sensei	teacher	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+64	1	7	先生	sensei	teacher	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 65	1	7	立つ	tatsu	stand, rise	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 66	1	7	呼ぶ	yobu	call, name	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 67	1	7	大学	daigaku	university, college	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -94,7 +94,7 @@
 93	2	3	あなた	anata	you	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 94	2	3	飲む	nomu	drink	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 95	2	3	古い	furui	old	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-96	2	3	質問	shitsumon	question	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+96	2	3	質問	shitsumon	question	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 97	2	3	今日	kyou	today (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 98	2	3	友達	tomodachi	friend, companion (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 99	2	3	早い	hayai	early	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -140,13 +140,13 @@
 139	2	7	自転車	jitensha	bicycle	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 140	2	7	電車	densha	train	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 141	3	1	探す	sagasu	search for, look for	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-142	3	1	紙	kami	paper	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+142	3	1	紙	kami	paper	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 143	3	1	歌う	utau	sing	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 144	3	1	遅い	osoi	slow, late	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 145	3	1	首	kubi	neck	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 146	3	1	速い	hayai	fast	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 147	3	1	一緒に	issho ni	together, at the same time	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-148	3	1	今月	kongetsu	this month	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+148	3	1	今月	kongetsu	this month	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 149	3	1	遊ぶ	asobu	play	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 150	3	1	遠い	tooi	far, distant	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 151	3	2	弱い	yowai	weak	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -186,7 +186,7 @@
 185	3	5	続く	tsuzuku	continue, follow	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 186	3	5	お医者さん	oishasan	doctor (polite)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 187	3	5	円	en	Japanese yen	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-188	3	5	ここ	koko	here	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+188	3	5	ここ	koko	here	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 189	3	5	待つ	matsu	wait, wait for	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 190	3	5	低い	hikui	low, short	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 191	3	6	もらう	morau	receive	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -235,7 +235,7 @@
 234	4	3	痛い	itai	sore, painful	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 235	4	3	お父さん	otousan	father, dad (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 236	4	3	多分	tabun	probably, perhaps	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-237	4	3	時計	tokei	clock, watch	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+237	4	3	時計	tokei	clock, watch	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 238	4	3	泊まる	tomaru	stay overnight	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 239	4	3	どうして	doushite	how come	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 240	4	3	掛ける	kakeru	hang, put on	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -245,11 +245,11 @@
 244	4	4	嫌い	kirai	dislike (habitual)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 245	4	4	金曜日	kinyoubi	Friday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 246	4	4	要る	iru	need, require	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-247	4	4	無い	nai	to not be	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+247	4	4	無い	nai	to not be	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 248	4	4	風邪	kaze	cold (illness)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 249	4	4	黄色い	kiiroi	yellow	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 250	4	4	優しい	yasashii	gentle, kind	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-251	4	5	晴れる	hareru	be sunny, clear up	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+251	4	5	晴れる	hareru	be sunny, clear up	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 252	4	5	汚い	kitanai	dirty	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 253	4	5	茶色	chairo	brown	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 254	4	5	空く	suku	be empty, become less crowded	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -289,7 +289,7 @@
 288	5	1	直る	naoru	be repaired, get fixed	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 289	5	1	ちょっと	chotto	just a moment, just a little	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 290	5	1	四	yon	four (Japanese origin)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-291	5	2	これから	korekara	from now on, after this	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+291	5	2	これから	korekara	from now on, after this	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 292	5	2	考える	kangaeru	think, consider	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 293	5	2	戻る	modoru	return to a point of departure	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 294	5	2	変える	kaeru	change (something), alter	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -332,7 +332,7 @@
 332	5	6	昨日	kinou	yesterday (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 333	5	6	綺麗	kirei	pretty, clean	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 334	5	6	五	go	five	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-335	5	6	九つ	kokonotsu	nine (things)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+335	5	6	九つ	kokonotsu	nine (things)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 336	5	6	お願い	onegai	favor	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 337	5	6	答える	kotaeru	give an answer	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 338	5	6	先	saki	ahead, first	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -392,7 +392,7 @@
 392	6	5	以外	igai	except for	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 393	6	5	男	otoko	man, male	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 394	6	5	彼	kare	he, one’s boyfriend	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-395	6	5	女	onna	woman	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+395	6	5	女	onna	woman	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 396	6	5	妻	tsuma	woman	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 397	6	5	百	hyaku	hundred	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 398	6	5	辺	atari	vicinity	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -422,7 +422,7 @@
 422	7	1	家	ie	house, dwelling	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 423	7	1	多く	ooku	much, largely	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 424	7	1	話	hanashi	talk, story	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-425	7	1	上がる	agaru	go up, rise (physical movement)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+425	7	1	上がる	agaru	go up, rise (physical movement)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 426	7	1	もう	mou	another, again	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 427	7	1	集める	atsumeru	collect, gather	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 428	7	1	声	koe	voice, sound	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -437,7 +437,7 @@
 437	7	2	まま	mama	as is, still (in the current state)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 438	7	2	テレビ	terebi	television	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 439	7	2	減る	heru	decrease, diminish	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-440	7	2	消える	kieru	be extinguished, disappear	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+440	7	2	消える	kieru	be extinguished, disappear	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 441	7	3	家族	kazoku	family, household	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 442	7	3	比べる	kuraberu	compare, contrast	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 443	7	3	生まれる	umareru	be born, come into existence	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -452,15 +452,15 @@
 452	7	4	あまり	amari	(not) much	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 453	7	4	写真	shashin	photograph	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 454	7	4	繰り返す	kurikaesu	repeat	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-455	7	4	種類	shurui	kind, type	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+455	7	4	種類	shurui	kind, type	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 456	7	4	意見	iken	opinion	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-457	7	4	新聞	shinbun	newspaper	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+457	7	4	新聞	shinbun	newspaper	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 458	7	4	文章	bunshou	sentence, writing	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 459	7	4	目立つ	medatsu	stand out, be conspicuous	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 460	7	4	相手	aite	opponent, the other party	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 461	7	5	病院	byouin	hospital	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-462	7	5	厚い	atsui	thick, bulky	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-463	7	5	忙しい	isogashii	busy, occupied	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+462	7	5	厚い	atsui	thick, bulky	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
+463	7	5	忙しい	isogashii	busy, occupied	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 464	7	5	薄い	usui	thin, weak	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 465	7	5	川	kawa	river, stream	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 466	7	5	暗い	kurai	dark, gloomy	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
