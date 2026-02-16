@@ -223,6 +223,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1563, 1002);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
             TopMost = true;

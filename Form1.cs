@@ -42,6 +42,9 @@ namespace languageFlashCards
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Subtract)
+                this.WindowState = FormWindowState.Minimized;
+
             Label clickedLabel = e.KeyCode switch
             {
                 Keys.NumPad7 => label2,
@@ -146,21 +149,35 @@ namespace languageFlashCards
 
             int correctIndex = _rand.Next(_optionLabels.Count);
             _correctLabel = _optionLabels[correctIndex];
-            _correctLabel.Text = $"{_currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{_currentWord.translation}";
+            _correctLabel.Text =
+                $"{_currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{_currentWord.translation}";
 
-            var used = new HashSet<int> { correctIndex };
+            // Track used word indices
+            var usedWordIndexes = new HashSet<int>();
+
+            // Add correct word index
+            int correctWordIndex = _words.FindIndex(w => w.japanese == _currentWord.japanese);
+            usedWordIndexes.Add(correctWordIndex);
+
             for (int i = 0; i < _optionLabels.Count; i++)
             {
                 if (i == correctIndex) continue;
 
                 int idx;
-                do { idx = _rand.Next(_words.Count); }
-                while (_words[idx].japanese == _currentWord.japanese);
+                do
+                {
+                    idx = _rand.Next(_words.Count);
+                }
+                while (usedWordIndexes.Contains(idx));
 
-                _optionLabels[i].Text = $"{_words[idx].pronunciation}{Environment.NewLine}{Environment.NewLine}{_words[idx].translation}";
+                usedWordIndexes.Add(idx);
+
+                _optionLabels[i].Text =
+                    $"{_words[idx].pronunciation}{Environment.NewLine}{Environment.NewLine}{_words[idx].translation}";
             }
 
             isClicked = false;
+
         }
 
         private void Option_Click(object sender, EventArgs e)
