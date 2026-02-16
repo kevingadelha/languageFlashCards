@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
+            label1 = new OutlinedLabel();
+            label2 = new OutlinedLabel();
+            label3 = new OutlinedLabel();
+            label4 = new OutlinedLabel();
+            label5 = new OutlinedLabel();
+            label6 = new OutlinedLabel();
+            label7 = new OutlinedLabel();
+            label8 = new OutlinedLabel();
+            label9 = new OutlinedLabel();
+            label10 = new OutlinedLabel();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
@@ -235,16 +235,16 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
+        private OutlinedLabel label1;
+        private OutlinedLabel label2;
+        private OutlinedLabel label3;
+        private OutlinedLabel label4;
+        private OutlinedLabel label5;
+        private OutlinedLabel label6;
+        private OutlinedLabel label7;
+        private OutlinedLabel label8;
+        private OutlinedLabel label9;
+        private OutlinedLabel label10;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
     }

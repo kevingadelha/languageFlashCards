@@ -1,5 +1,5 @@
 #	week	day	japanese	pronounciation	translation	1d	2d	6d	12d	30d	100d	Last studied	Correct_Streak
-1	1	1	行く	iku	go	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+1	1	1	行く	iku	go	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 2	1	1	見る	miru	see, look at	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 3	1	1	多い	ooi	a lot of, many	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 4	1	1	家	ie	home, household	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -75,7 +75,7 @@
 74	2	1	近い	chikai	near, close	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 75	2	1	そこ	soko	there	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 76	2	1	走る	hashiru	run	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-77	2	1	入れる	ireru	put in	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+77	2	1	入れる	ireru	put in	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 78	2	1	教える	oshieru	teach, tell	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 79	2	1	歩く	aruku	walk, go on foot	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 80	2	1	会う	au	meet	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -257,7 +257,7 @@
 256	4	5	ご飯	gohan	meal, cooked rice	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 257	4	5	日	nichi	counter for days	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 258	4	5	髪の毛	kaminoke	hair, each single hair	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-259	4	5	つける	tsukeru	switch on, turn on	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+259	4	5	つける	tsukeru	switch on, turn on	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 260	4	5	月曜日	getsuyoubi	Monday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 261	4	6	入る	hairu	enter	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 262	4	6	カタカナ	katakana	katakana	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -296,7 +296,7 @@
 295	5	2	朝	asa	morning	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 296	5	2	歯	ha	tooth	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 297	5	2	頑張る	ganbaru	work hard, do one’s best	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-298	5	2	携帯電話	keitaidenwa	cellular phone	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+298	5	2	携帯電話	keitaidenwa	cellular phone	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 299	5	2	雨	ame	rain	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 300	5	2	金	kane	money (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 301	5	3	易しい	yasashii	easy, simple (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -340,12 +340,12 @@
 340	5	6	四	shi	four (Chinese origin)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 341	5	7	三日	mikka	three days, third of the month	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 342	5	7	下	shita	under, below	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-343	5	7	大丈夫	daijoubu	all right, OK	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+343	5	7	大丈夫	daijoubu	all right, OK	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 344	5	7	大人	otona	adult	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 345	5	7	出す	dasu	take out	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 346	5	7	父	chichi	(speaker’s) father	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 347	5	7	母	haha	(speaker’s) mother	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-348	5	7	月	tsuki	moon	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+348	5	7	月	tsuki	moon	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 349	5	7	妹	imouto	younger sister	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 350	5	7	冷たい	tsumetai	cold (to touch)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 351	6	1	弟	otouto	younger brother	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -355,14 +355,14 @@
 355	6	1	夏	natsu	summer	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 356	6	1	七つ	nanatsu	seven (things)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 357	6	1	時々	tokidoki	sometimes	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-358	6	1	何	nani	what	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+358	6	1	何	nani	what	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 359	6	1	人	hito	person	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 360	6	1	一人	hitori	one person	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 361	6	2	一日	tsuitachi	first of the month	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 362	6	2	九日	kokonoka	nine days, ninth of the month	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 363	6	2	方	hou	direction, side	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 364	6	2	他	hoka	other (Japanese origin)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-365	6	2	僕	boku	I, me (usually used by young males)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+365	6	2	僕	boku	I, me (usually used by young males)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 366	6	2	欲しい	hoshii	want, desire (of the speaker)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 367	6	2	万	man	ten thousand	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 368	6	2	見える	mieru	be visible, can see	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -409,7 +409,7 @@
 409	6	6	以上	ijou	more than, not less than	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 410	6	6	最近	saikin	recent, latest	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 411	6	7	世界	sekai	world	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-412	6	7	コンピューター	konpyu-ta-	computer	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+412	6	7	コンピューター	konpyu-ta-	computer	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 413	6	7	やる	yaru	give (to an inferior)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 414	6	7	意味	imi	meaning, sense	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 415	6	7	増える	fueru	increase, accrue	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -469,7 +469,7 @@
 469	7	5	バス	basu	bus	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 470	7	5	青い	aoi	blue	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 471	7	6	買い物	kaimono	shopping, purchase	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-472	7	6	薬	kusuri	drug, medicine	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+472	7	6	薬	kusuri	drug, medicine	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 473	7	6	砂糖	satou	sugar	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 474	7	6	休み	yasumi	holiday, break	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 475	7	6	郵便局	yuubinkyoku	post office	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	

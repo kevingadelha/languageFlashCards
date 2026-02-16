@@ -10,6 +10,7 @@ namespace languageFlashCards
 {
     public partial class Form1 : Form
     {
+        //Addaptively add words total
         private class WordPair
         {
             public int RowIndex { get; set; }   // line number in file (excluding header)
