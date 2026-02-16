@@ -223,6 +223,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
+            TopMost = true;
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);

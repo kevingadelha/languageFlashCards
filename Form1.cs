@@ -7,7 +7,6 @@ using System.Windows.Forms;
 
 namespace languageFlashCards
 {
-    //Add adaptive diffuclty
     //Add transparency
     public partial class Form1 : Form
     {
