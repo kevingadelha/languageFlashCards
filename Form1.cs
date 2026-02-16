@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace languageFlashCards
 {
-    //Add transparency
     public partial class Form1 : Form
     {
         private class WordPair
@@ -33,6 +33,32 @@ namespace languageFlashCards
         public Form1()
         {
             InitializeComponent();
+
+            this.KeyPreview = true; // important to let the form capture key presses
+            this.KeyDown += Form1_KeyDown;
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Label clickedLabel = e.KeyCode switch
+            {
+                Keys.NumPad7 => label2,
+                Keys.NumPad8 => label3,
+                Keys.NumPad9 => label4,
+                Keys.NumPad4 => label5,
+                Keys.NumPad5 => label6,
+                Keys.NumPad6 => label7,
+                Keys.NumPad1 => label8,
+                Keys.NumPad2 => label9,
+                Keys.NumPad3 => label10,
+                _ => null
+            };
+
+            if (clickedLabel != null)
+            {
+                Option_Click(clickedLabel, EventArgs.Empty);
+                e.Handled = true;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

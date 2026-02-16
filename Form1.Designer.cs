@@ -224,6 +224,7 @@
             Name = "Form1";
             Text = "Form1";
             TopMost = true;
+            TransparencyKey = Color.White;
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);
