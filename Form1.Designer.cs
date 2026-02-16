@@ -47,6 +47,7 @@
             // label1
             // 
             label1.BackColor = Color.White;
+            label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 150F);
             label1.Location = new Point(3, 0);
@@ -224,7 +225,7 @@
             Name = "Form1";
             Text = "Form1";
             TopMost = true;
-            TransparencyKey = Color.White;
+            TransparencyKey = Color.Orange;
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);

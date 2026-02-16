@@ -28,7 +28,8 @@ namespace languageFlashCards
         private Label _correctLabel;
         private List<Label> _optionLabels = new List<Label>();
         private bool isClicked = false;
-        private Color defaultColor = Color.White;
+        private Color defaultColor = Color.Orange;
+        private Color defaultText = Color.Black;
 
         public Form1()
         {
@@ -125,8 +126,12 @@ namespace languageFlashCards
         private void ShowNextWord()
         {
             label1.BackColor = defaultColor;
+            label1.ForeColor = defaultText;
             foreach (var lbl in _optionLabels)
+            {
                 lbl.BackColor = defaultColor;
+                lbl.ForeColor = defaultText;
+            }
 
             int minStreak = _words.Min(w => w.CorrectStreak);
 
@@ -172,15 +177,15 @@ namespace languageFlashCards
 
             if (correct)
             {
-                clicked.BackColor = Color.LightGreen;
-                label1.BackColor = Color.LightGreen;
+                clicked.ForeColor = Color.LightGreen;
+                label1.ForeColor = Color.LightGreen;
                 _currentWord.CorrectStreak++;
             }
             else
             {
-                _correctLabel.BackColor = Color.LightGreen;
-                clicked.BackColor = Color.LightCoral;
-                label1.BackColor = Color.LightCoral;
+                _correctLabel.ForeColor = Color.LightGreen;
+                clicked.ForeColor = Color.LightCoral;
+                label1.ForeColor = Color.LightCoral;
                 _currentWord.CorrectStreak = 0;
             }
 
