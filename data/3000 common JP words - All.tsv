@@ -1,4 +1,4 @@
-#	week	day	japanese	pronounciation	translation	1d	2d	6d	12d	30d	100d	Last studied
+#	week	day	japanese	pronounciation	translation	1d	2d	6d	12d	30d	100d	Last studied	Correct_Streak
 1	1	1	行く	iku	go	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 2	1	1	見る	miru	see, look at	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 3	1	1	多い	ooi	a lot of, many	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -88,11 +88,11 @@
 87	2	2	飛ぶ	tobu	fly	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 88	2	2	とても	totemo	very (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 89	2	2	誰	dare	who	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-90	2	2	好き	suki	favorite, liked	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+90	2	2	好き	suki	favorite, liked	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 91	2	3	読む	yomu	read	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 92	2	3	次	tsugi	next	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 93	2	3	あなた	anata	you	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-94	2	3	飲む	nomu	drink	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+94	2	3	飲む	nomu	drink	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 95	2	3	古い	furui	old	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 96	2	3	質問	shitsumon	question	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 97	2	3	今日	kyou	today (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -203,7 +203,7 @@
 202	3	7	時	toki	time, moment	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 203	3	7	米	kome	rice (grain)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 204	3	7	切る	kiru	cut	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-205	3	7	楽しい	tanoshii	fun, enjoyable	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+205	3	7	楽しい	tanoshii	fun, enjoyable	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 206	3	7	服	fuku	clothes (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 207	3	7	後ろ	ushiro	back, behind	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 208	3	7	嬉しい	ureshii	happy, glad	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
@@ -231,7 +231,7 @@
 230	4	2	暑い	atsui	hot (of weather)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 231	4	3	太い	futoi	thick, fat	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 232	4	3	晩	ban	evening, night (from sunset to bedtime)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-233	4	3	土曜日	doyoubi	Saturday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
+233	4	3	土曜日	doyoubi	Saturday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 234	4	3	痛い	itai	sore, painful	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 235	4	3	お父さん	otousan	father, dad (colloquial)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 236	4	3	多分	tabun	probably, perhaps	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
