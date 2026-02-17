@@ -42,7 +42,7 @@ namespace languageFlashCards
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
+            if (e.KeyCode == Keys.Subtract)
                 this.WindowState = FormWindowState.Minimized;
 
             Label clickedLabel = e.KeyCode switch
