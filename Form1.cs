@@ -10,7 +10,7 @@ namespace languageFlashCards
 {
     public partial class Form1 : Form
     {
-        //Addaptively add words total
+        
         private class WordPair
         {
             public int RowIndex { get; set; }   // line number in file (excluding header)
@@ -26,6 +26,7 @@ namespace languageFlashCards
         private string[] _allLines;
         private Random _rand = new Random();
         private WordPair _currentWord;
+        private WordPair _previousWord;
         private Label _correctLabel;
         private List<Label> _optionLabels = new List<Label>();
         private bool isClicked = false;
@@ -44,26 +45,73 @@ namespace languageFlashCards
         {
             if (e.KeyCode == Keys.Subtract)
                 this.WindowState = FormWindowState.Minimized;
+            else if (e.KeyCode == Keys.C)
+            {
+                if (!string.IsNullOrWhiteSpace(label1.Text))
+                    Clipboard.SetText(label1.Text);
+
+                e.Handled = true;
+                return;
+            }
+            else if (e.KeyCode == Keys.R)
+            {
+                RemoveCurrentWord();
+                e.Handled = true;
+                return;
+            }
 
             Label clickedLabel = e.KeyCode switch
-            {
-                Keys.NumPad7 => label2,
-                Keys.NumPad8 => label3,
-                Keys.NumPad9 => label4,
-                Keys.NumPad4 => label5,
-                Keys.NumPad5 => label6,
-                Keys.NumPad6 => label7,
-                Keys.NumPad1 => label8,
-                Keys.NumPad2 => label9,
-                Keys.NumPad3 => label10,
-                _ => null
-            };
+                {
+                    Keys.NumPad7 => label2,
+                    Keys.NumPad8 => label3,
+                    Keys.NumPad9 => label4,
+                    Keys.NumPad4 => label5,
+                    Keys.NumPad5 => label6,
+                    Keys.NumPad6 => label7,
+                    Keys.NumPad1 => label8,
+                    Keys.NumPad2 => label9,
+                    Keys.NumPad3 => label10,
+                    _ => null
+                };
 
             if (clickedLabel != null)
             {
                 Option_Click(clickedLabel, EventArgs.Empty);
                 e.Handled = true;
             }
+        }
+
+        private void RemoveCurrentWord()
+        {
+            if (_currentWord == null) return;
+
+            int rowToRemove = _currentWord.RowIndex;
+
+            // Remove from in-memory word list
+            _words.Remove(_currentWord);
+
+            // Remove from file lines
+            var linesList = _allLines.ToList();
+            linesList.RemoveAt(rowToRemove);
+            _allLines = linesList.ToArray();
+
+            // Fix RowIndex for remaining words
+            foreach (var w in _words)
+            {
+                if (w.RowIndex > rowToRemove)
+                    w.RowIndex--;
+            }
+
+            // Rewrite file
+            File.WriteAllLines(path, _allLines);
+
+            if (_words.Count == 0)
+            {
+                label1.Text = "No words left";
+                return;
+            }
+
+            ShowNextWord();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -143,7 +191,23 @@ namespace languageFlashCards
                 .Where(w => w.CorrectStreak == minStreak)
                 .ToList();
 
-            _currentWord = candidates[_rand.Next(candidates.Count)];
+            WordPair nextWord;
+
+            if (candidates.Count > 1)
+            {
+                do
+                {
+                    nextWord = candidates[_rand.Next(candidates.Count)];
+                }
+                while (_previousWord != null && nextWord == _previousWord);
+            }
+            else
+            {
+                nextWord = candidates[0]; // Only one option available
+            }
+
+            _currentWord = nextWord;
+            _previousWord = _currentWord;
 
             label1.Text = _currentWord.japanese;
 
