@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -78,6 +78,34 @@ namespace languageFlashCards
             {
                 Option_Click(clickedLabel, EventArgs.Empty);
                 e.Handled = true;
+            }
+            if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
+            {
+                int number = e.KeyCode - Keys.D0;
+
+                if (number == 0)
+                    this.Opacity = 1.0;           // 100%
+                else
+                    this.Opacity = number / 10.0; // 10% - 90%
+
+                e.Handled = true;
+                return;
+            }
+
+            // Top "-" key → decrease 1%
+            if (e.KeyCode == Keys.OemMinus)
+            {
+                this.Opacity = Math.Max(0.01, this.Opacity - 0.01);
+                e.Handled = true;
+                return;
+            }
+
+            // Top "=" key → increase 1%
+            if (e.KeyCode == Keys.Oemplus)
+            {
+                this.Opacity = Math.Min(1.0, this.Opacity + 0.01);
+                e.Handled = true;
+                return;
             }
         }
 
