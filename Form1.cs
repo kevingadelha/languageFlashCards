@@ -59,6 +59,33 @@ namespace languageFlashCards
                 e.Handled = true;
                 return;
             }
+            else if (e.KeyCode == Keys.L)
+            {
+                if (_words == null || _words.Count == 0) return;
+
+                // Reset in-memory objects
+                foreach (var word in _words)
+                {
+                    word.CorrectStreak = 0;
+
+                    var parts = _allLines[word.RowIndex].Split('\t').ToList();
+
+                    while (parts.Count <= 12)
+                        parts.Add("");
+
+                    parts[12] = "0";
+
+                    _allLines[word.RowIndex] = string.Join("\t", parts);
+                }
+
+                // Rewrite file once (not per word)
+                File.WriteAllLines(path, _allLines);
+
+                // Optional: refresh word selection immediately
+                ShowNextWord();
+                e.Handled = true;
+                return;
+            }
 
             Label clickedLabel = e.KeyCode switch
                 {
@@ -296,7 +323,6 @@ namespace languageFlashCards
                 _correctLabel.ForeColor = Color.LightGreen;
                 clicked.ForeColor = Color.LightCoral;
                 label1.ForeColor = Color.LightCoral;
-                _currentWord.CorrectStreak = 0;
             }
 
             SaveProgress(_currentWord);
