@@ -30,6 +30,8 @@ namespace languageFlashCards
         private Label _correctLabel;
         private List<Label> _optionLabels = new List<Label>();
         private bool isClicked = false;
+        private bool isShown = false;
+        private bool showAll = true;
         private Color defaultColor = Color.Orange;
         private Color defaultText = Color.Black;
 
@@ -56,6 +58,21 @@ namespace languageFlashCards
             else if (e.KeyCode == Keys.R)
             {
                 RemoveCurrentWord();
+                e.Handled = true;
+                return;
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                showAll = !showAll;
+                UpdateOptionVisibility();
+                e.Handled = true;
+                return;
+            }
+            else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.B)
+            {
+                CenterCorrect();
+                _correctLabel.Visible = true;
+                isShown = true;
                 e.Handled = true;
                 return;
             }
@@ -89,6 +106,8 @@ namespace languageFlashCards
 
             Label clickedLabel = e.KeyCode switch
                 {
+                    Keys.NumPad0 => label1,
+                    Keys.PageUp => label1,
                     Keys.NumPad7 => label2,
                     Keys.NumPad8 => label3,
                     Keys.NumPad9 => label4,
@@ -98,6 +117,8 @@ namespace languageFlashCards
                     Keys.NumPad1 => label8,
                     Keys.NumPad2 => label9,
                     Keys.NumPad3 => label10,
+                    Keys.Enter => _correctLabel,
+                    Keys.PageDown => _correctLabel,
                     _ => null
                 };
 
@@ -167,6 +188,12 @@ namespace languageFlashCards
             }
 
             ShowNextWord();
+        }
+
+        private void CenterCorrect()
+        {
+            label6.Text = _correctLabel.Text;
+            _correctLabel = label6;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -296,6 +323,8 @@ namespace languageFlashCards
             }
 
             isClicked = false;
+            isShown = false;
+            UpdateOptionVisibility();
 
         }
 
@@ -311,22 +340,37 @@ namespace languageFlashCards
             if (clicked == null) return;
 
             bool correct = clicked == _correctLabel;
+            if (!showAll && _correctLabel != null)
+            {
+                CenterCorrect();
+                _correctLabel.Visible = true;
+            }
 
             if (correct)
             {
-                clicked.ForeColor = Color.LightGreen;
-                label1.ForeColor = Color.LightGreen;
+                if (showAll)
+                {
+                    _correctLabel.ForeColor = Color.LightGreen;
+                    clicked.ForeColor = Color.LightGreen;
+                    label1.ForeColor = Color.LightGreen;
+                }
                 _currentWord.CorrectStreak++;
             }
             else
             {
-                _correctLabel.ForeColor = Color.LightGreen;
-                clicked.ForeColor = Color.LightCoral;
-                label1.ForeColor = Color.LightCoral;
+                if (showAll)
+                {
+                    _correctLabel.ForeColor = Color.LightGreen;
+                    clicked.ForeColor = Color.LightCoral;
+                    label1.ForeColor = Color.LightCoral;
+                }
             }
 
             SaveProgress(_currentWord);
-
+            if (isShown)
+            {
+                ShowNextWord();
+            }
         }
 
         private void SaveProgress(WordPair word)
@@ -341,6 +385,23 @@ namespace languageFlashCards
             _allLines[word.RowIndex] = string.Join("\t", parts);
 
             File.WriteAllLines(path, _allLines);
+        }
+        private void UpdateOptionVisibility()
+        {
+            if (showAll)
+            {
+                foreach (var lbl in _optionLabels)
+                    lbl.Visible = true;
+            }
+            else
+            {
+                foreach (var lbl in _optionLabels)
+                    lbl.Visible = false;
+
+                // Always show correct label if answer has been revealed
+                if (isClicked && _correctLabel != null)
+                    _correctLabel.Visible = true;
+            }
         }
 
     }
