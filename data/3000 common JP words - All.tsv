@@ -138,11 +138,11 @@
 177	3	4	送る	okuru	send	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 178	3	4	死ぬ	shinu	die	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 179	3	4	気持ち	kimochi	feeling, sensation	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-180	3	4	乗る	noru	ride, take	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+180	3	4	乗る	noru	ride, take	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 182	3	5	木	ki	tree, wood	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 183	3	5	開ける	akeru	open, unlock (doors, windows, etc.)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 184	3	5	閉める	shimeru	shut, close (doors, windows, etc.)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-185	3	5	続く	tsuzuku	continue, follow	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+185	3	5	続く	tsuzuku	continue, follow	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 186	3	5	お医者さん	oishasan	doctor (polite)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 189	3	5	待つ	matsu	wait, wait for	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 190	3	5	低い	hikui	low, short	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -186,7 +186,7 @@
 240	4	3	掛ける	kakeru	hang, put on	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 241	4	4	曲がる	magaru	make a turn, turn	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 242	4	4	お腹	onaka	stomach, belly	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-244	4	4	嫌い	kirai	dislike (habitual)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+244	4	4	嫌い	kirai	dislike (habitual)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 245	4	4	金曜日	kinyoubi	Friday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 246	4	4	要る	iru	need, require	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 247	4	4	無い	nai	to not be	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -204,7 +204,7 @@
 260	4	5	月曜日	getsuyoubi	Monday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 261	4	6	入る	hairu	enter	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 263	4	6	今週	konshuu	this week	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-264	4	6	開く	hiraku	open (books, eyes, etc.)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+264	4	6	開く	hiraku	open (books, eyes, etc.)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 265	4	6	水	mizu	water	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 268	4	6	締める	shimeru	tighten, fasten	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 270	4	6	平仮名	hiragana	hiragana	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -212,9 +212,9 @@
 272	4	7	触る	sawaru	touch, feel	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 273	4	7	駄目	dame	no good	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 274	4	7	飲み物	nomimono	beverage, drink	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-275	4	7	木曜日	mokuyoubi	Thursday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+275	4	7	木曜日	mokuyoubi	Thursday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 279	4	7	火曜日	kayoubi	Tuesday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
-280	4	7	渇く	kawaku	be thirsty	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+280	4	7	渇く	kawaku	be thirsty	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 282	5	1	水曜日	suiyoubi	Wednesday	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 283	5	1	二つ	futatsu	two (things)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 284	5	1	今晩	konban	this evening, tonight	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
@@ -225,7 +225,7 @@
 293	5	2	戻る	modoru	return to a point of departure	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 294	5	2	変える	kaeru	change (something), alter	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 295	5	2	朝	asa	morning	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-296	5	2	歯	ha	tooth	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+296	5	2	歯	ha	tooth	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 297	5	2	頑張る	ganbaru	work hard, do one’s best	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 298	5	2	携帯電話	keitaidenwa	cellular phone	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 299	5	2	雨	ame	rain	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
@@ -317,7 +317,7 @@
 404	6	6	開く	hiraku	open	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 405	6	6	昨年	sakunen	last year (formal, often used in writing)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 406	6	6	治る	naoru	be cured, get well	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
-407	6	6	ドル	doru	dollar	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+407	6	6	ドル	doru	dollar	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 409	6	6	以上	ijou	more than, not less than	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 410	6	6	最近	saikin	recent, latest	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 411	6	7	世界	sekai	world	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -345,11 +345,11 @@
 441	7	3	家族	kazoku	family, household	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 442	7	3	比べる	kuraberu	compare, contrast	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 443	7	3	生まれる	umareru	be born, come into existence	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-444	7	3	ただ	tada	free	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+444	7	3	ただ	tada	free	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 446	7	3	調べる	shiraberu	investigate, check	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 447	7	3	事故	jiko	accident, trouble	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 449	7	3	外国	gaikoku	foreign country	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-450	7	3	銀行	ginkou	bank	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+450	7	3	銀行	ginkou	bank	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 451	7	4	十分	juubun	enough, plentiful	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 453	7	4	写真	shashin	photograph	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 454	7	4	繰り返す	kurikaesu	repeat	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -413,7 +413,7 @@
 529	8	4	大人しい	otonashii	gentle, quiet	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 530	8	4	下手	heta	not good at	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 531	8	5	厳しい	kibishii	strict, severe	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-532	8	5	一人で	hitoride	by oneself, alone	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+532	8	5	一人で	hitoride	by oneself, alone	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 533	8	5	答え	kotae	answer, solution	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 534	8	5	この頃	konogoro	these days, recently	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 535	8	5	残念	zannen	regretful, disappointing	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -428,7 +428,7 @@
 544	8	6	丈夫	joubu	healthy, sturdy	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 545	8	6	賑やか	nigiyaka	lively, exciting	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 546	8	6	眠い	nemui	sleepy	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-548	8	6	橋	hashi	bridge	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+548	8	6	橋	hashi	bridge	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 549	8	6	止まる	tomaru	come to a stop, cease	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 550	8	6	降る	furu	fall, come down (rain, snow, etc.)	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 551	8	7	本当	hontou	reality, genuine	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -514,12 +514,12 @@
 647	10	2	進む	susumu	advance, move forward	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 648	10	2	直接	chokusetsu	directly	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 649	10	2	特に	tokuni	specially, particularly	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-650	10	2	届く	todoku	reach, be received	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+650	10	2	届く	todoku	reach, be received	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 652	10	3	並ぶ	narabu	line up, be parallel	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 653	10	3	運ぶ	hakobu	carry, transport	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 654	10	3	直す	naosu	repair, fix	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 655	10	3	反対	hantai	oppose, object	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
-656	10	3	場合	baai	situation, case	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+656	10	3	場合	baai	situation, case	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 657	10	3	詳しい	kuwashii	detailed	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 658	10	3	いたずら	itazura	mischief, prank	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 659	10	3	お祝い	oiwai	celebrate	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
@@ -550,7 +550,7 @@
 688	10	6	地震	jishin	earthquake	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 689	10	6	手術	shujutsu	surgical operation	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 690	10	6	火傷	yakedo	burn	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
-691	10	7	課題	kadai	task, assignment	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
+691	10	7	課題	kadai	task, assignment	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 692	10	7	子	ko	young child, kid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
 693	10	7	確認	kakunin	confirmation	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	0
 694	10	7	実際	jissai	reality, actual state	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	1
