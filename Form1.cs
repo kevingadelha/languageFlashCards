@@ -31,7 +31,7 @@ namespace languageFlashCards
         private List<Label> _optionLabels = new List<Label>();
         private bool isClicked = false;
         private bool isShown = false;
-        private bool showAll = true;
+        private bool showAll = false;
         private Color defaultColor = Color.Orange;
         private Color defaultText = Color.Black;
 
@@ -68,14 +68,14 @@ namespace languageFlashCards
                 e.Handled = true;
                 return;
             }
-            else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.B)
+            /*else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.B)
             {
                 CenterCorrect();
                 _correctLabel.Visible = true;
                 isShown = true;
                 e.Handled = true;
                 return;
-            }
+            }*/
             else if (e.KeyCode == Keys.L)
             {
                 if (_words == null || _words.Count == 0) return;
@@ -330,21 +330,23 @@ namespace languageFlashCards
 
         private void Option_Click(object sender, EventArgs e)
         {
-            if (isClicked)
+            if (isClicked && showAll)
             {
                 ShowNextWord();
                 return;
             }
-            isClicked = true;
             var clicked = sender as Label;
             if (clicked == null) return;
 
             bool correct = clicked == _correctLabel;
-            if (!showAll && _correctLabel != null)
+            if (!showAll && _correctLabel != null && !isClicked)
             {
+                isClicked = true;
                 CenterCorrect();
                 _correctLabel.Visible = true;
+                return;
             }
+            isClicked = true;
 
             if (correct)
             {
@@ -367,7 +369,7 @@ namespace languageFlashCards
             }
 
             SaveProgress(_currentWord);
-            if (isShown)
+            if (!showAll && isClicked)
             {
                 ShowNextWord();
             }
