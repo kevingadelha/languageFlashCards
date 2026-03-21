@@ -42,6 +42,8 @@ namespace languageFlashCards
             switch (e.KeyCode)
             {
                 case Keys.Subtract:
+                case Keys.Escape:
+                case Keys.F5:
                     this.WindowState = FormWindowState.Minimized;
                     break;
 
@@ -53,6 +55,8 @@ namespace languageFlashCards
                     return;
 
                 case Keys.R:
+                case Keys.B:
+                case Keys.Delete:
                     RemoveCurrentWord();
                     e.Handled = true;
                     return;
