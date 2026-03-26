@@ -14,19 +14,19 @@ namespace languageFlashCards
         private class WordPair
         {
             public int RowIndex { get; set; }   // line number in file (excluding header)
-            public string japanese { get; set; }
+            public string foreign { get; set; }
             public string pronunciation { get; set; }
-            public string translation { get; set; }
+            public string english { get; set; }
             public int CorrectStreak { get; set; }
         }
 
 
-        private List<WordPair> _words;
-        string path = @"C:\code\languageFlashCards\data\3000 common JP words - All.tsv";
-        private string[] _allLines;
-        private Random _rand = new Random();
-        private WordPair _currentWord;
-        private WordPair _previousWord;
+        private List<WordPair> words;
+        string path = @"C:\code\languageFlashCards\data\japanese working.tsv";
+        private string[] allLines;
+        private Random rand = new Random();
+        private WordPair currentWord;
+        private WordPair previousWord;
         private bool isClicked = false;
 
         public Form1()
@@ -62,23 +62,23 @@ namespace languageFlashCards
                     return;
 
                 case Keys.L:
-                    if (_words == null || _words.Count == 0) return;
+                    if (words == null || words.Count == 0) return;
 
-                    foreach (var word in _words)
+                    foreach (var word in words)
                     {
                         word.CorrectStreak = 0;
 
-                        var parts = _allLines[word.RowIndex].Split('\t').ToList();
+                        var parts = allLines[word.RowIndex].Split('\t').ToList();
 
                         while (parts.Count <= 12)
                             parts.Add("");
 
                         parts[12] = "0";
 
-                        _allLines[word.RowIndex] = string.Join("\t", parts);
+                        allLines[word.RowIndex] = string.Join("\t", parts);
                     }
 
-                    File.WriteAllLines(path, _allLines);
+                    File.WriteAllLines(path, allLines);
 
                     ShowNextWord();
                     e.Handled = true;
@@ -123,29 +123,29 @@ namespace languageFlashCards
 
         private void RemoveCurrentWord()
         {
-            if (_currentWord == null) return;
+            if (currentWord == null) return;
 
-            int rowToRemove = _currentWord.RowIndex;
+            int rowToRemove = currentWord.RowIndex;
 
             // Remove from in-memory word list
-            _words.Remove(_currentWord);
+            words.Remove(currentWord);
 
             // Remove from file lines
-            var linesList = _allLines.ToList();
+            var linesList = allLines.ToList();
             linesList.RemoveAt(rowToRemove);
-            _allLines = linesList.ToArray();
+            allLines = linesList.ToArray();
 
             // Fix RowIndex for remaining words
-            foreach (var w in _words)
+            foreach (var w in words)
             {
                 if (w.RowIndex > rowToRemove)
                     w.RowIndex--;
             }
 
             // Rewrite file
-            File.WriteAllLines(path, _allLines);
+            File.WriteAllLines(path, allLines);
 
-            if (_words.Count == 0)
+            if (words.Count == 0)
             {
                 label1.Text = "No words left";
                 return;
@@ -156,19 +156,19 @@ namespace languageFlashCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _words = LoadTsv(path);
+            words = LoadTsv(path);
 
             ShowNextWord();
         }
 
         private List<WordPair> LoadTsv(string path)
         {
-            _allLines = File.ReadAllLines(path);
+            allLines = File.ReadAllLines(path);
             var list = new List<WordPair>();
 
-            for (int i = 1; i < _allLines.Length; i++) // skip header
+            for (int i = 1; i < allLines.Length; i++) // skip header
             {
-                var line = _allLines[i];
+                var line = allLines[i];
                 if (string.IsNullOrWhiteSpace(line)) continue;
 
                 var parts = line.Split('\t');
@@ -182,9 +182,9 @@ namespace languageFlashCards
                 list.Add(new WordPair
                 {
                     RowIndex = i,
-                    japanese = parts[3].Trim(),
+                    foreign = parts[3].Trim(),
                     pronunciation = parts[4].Trim(),
-                    translation = parts[5].Trim(),
+                    english = parts[5].Trim(),
                     CorrectStreak = streak
                 });
             }
@@ -195,9 +195,9 @@ namespace languageFlashCards
 
         private void ShowNextWord()
         {
-            int minStreak = _words.Min(w => w.CorrectStreak);
+            int minStreak = words.Min(w => w.CorrectStreak);
 
-            var candidates = _words
+            var candidates = words
                 .Where(w => w.CorrectStreak == minStreak)
                 .ToList();
 
@@ -207,22 +207,22 @@ namespace languageFlashCards
             {
                 do
                 {
-                    nextWord = candidates[_rand.Next(candidates.Count)];
+                    nextWord = candidates[rand.Next(candidates.Count)];
                 }
-                while (_previousWord != null && nextWord == _previousWord);
+                while (previousWord != null && nextWord == previousWord);
             }
             else
             {
                 nextWord = candidates[0]; // Only one option available
             }
 
-            _currentWord = nextWord;
-            _previousWord = _currentWord;
+            currentWord = nextWord;
+            previousWord = currentWord;
 
-            label1.Text = _currentWord.japanese;
+            label1.Text = currentWord.foreign;
 
             label2.Text =
-                $"{_currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{_currentWord.translation}";
+                $"{currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{currentWord.english}";
 
             isClicked = false;
             label2.Visible = false;
@@ -240,25 +240,25 @@ namespace languageFlashCards
 
             if (correct)
             {
-                _currentWord.CorrectStreak++;
+                currentWord.CorrectStreak++;
             }
 
-            SaveProgress(_currentWord);
+            SaveProgress(currentWord);
             ShowNextWord();
         }
 
         private void SaveProgress(WordPair word)
         {
-            var parts = _allLines[word.RowIndex].Split('\t').ToList();
+            var parts = allLines[word.RowIndex].Split('\t').ToList();
 
             while (parts.Count <= 12)
                 parts.Add("");
 
             parts[12] = word.CorrectStreak.ToString();
 
-            _allLines[word.RowIndex] = string.Join("\t", parts);
+            allLines[word.RowIndex] = string.Join("\t", parts);
 
-            File.WriteAllLines(path, _allLines);
+            File.WriteAllLines(path, allLines);
         }
 
     }

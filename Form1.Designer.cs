@@ -84,7 +84,7 @@
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
-            Text = "Kanji flashcards";
+            Text = "Language Flashcards";
             TopMost = true;
             TransparencyKey = Color.Orange;
             WindowState = FormWindowState.Maximized;
