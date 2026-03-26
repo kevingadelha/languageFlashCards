@@ -10,7 +10,7 @@ namespace languageFlashCards
 {
     public partial class Form1 : Form
     {
-        
+
         private class WordPair
         {
             public int RowIndex { get; set; }   // line number in file (excluding header)
@@ -221,8 +221,9 @@ namespace languageFlashCards
 
             label1.Text = currentWord.foreign;
 
-            label2.Text =
-                $"{currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{currentWord.english}";
+            label2.Text = string.IsNullOrEmpty(currentWord.pronunciation)
+            ? currentWord.english
+            : $"{currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{currentWord.english}";
 
             isClicked = false;
             label2.Visible = false;
