@@ -13,16 +13,70 @@ namespace languageFlashCards
 
         private class WordPair
         {
-            public int RowIndex { get; set; }   // line number in file (excluding header)
+            public int RowIndex { get; set; }
             public string foreign { get; set; }
             public string pronunciation { get; set; }
             public string english { get; set; }
             public int CorrectStreak { get; set; }
         }
+        public class LanguageFileFormat
+        {
+            public string FilePath { get; init; }
+            public string Delimiter { get; init; }
+
+            public int ForeignIndex { get; init; }
+            public int? PronunciationIndex { get; init; }
+            public int EnglishIndex { get; init; }
+
+            public int StreakIndex { get; init; }
+
+            public int TextSize { get; init; }
+        }
+
+        public static readonly List<LanguageFileFormat> languages = new()
+        {
+            new LanguageFileFormat
+            {
+                // actual file in workspace: data\japanese working.tsv
+                FilePath =  @"C:\code\languageFlashCards\data\japanese working.tsv",
+                Delimiter = "\t",
+
+                ForeignIndex = 3,
+                PronunciationIndex = 4,
+                EnglishIndex = 5,
+                StreakIndex = 12,
+                TextSize = 150
+            },/*
+            new LanguageFileFormat
+            {
+                FilePath =  @"C:\code\languageFlashCards\data\japanese temp.psv",
+                Delimiter = "|",
+
+                ForeignIndex = 0,
+                PronunciationIndex = 1,
+                EnglishIndex = 2,
+                StreakIndex = 3,
+                TextSize = 100
+            },*/
+            new LanguageFileFormat
+            {
+                // actual file in workspace: data\french_words.csv
+                FilePath =  @"C:\code\languageFlashCards\data\french_words.csv",
+                Delimiter = ",",
+
+                ForeignIndex = 0,
+                PronunciationIndex = null,
+                EnglishIndex = 1,
+                StreakIndex = 2,
+                TextSize = 48
+            }
+        };
 
 
         private List<WordPair> words;
-        string path = @"C:\code\languageFlashCards\data\japanese working.tsv";
+        private int selectedLanguageIndex = 0;
+        private LanguageFileFormat currentLanguage;
+
         private string[] allLines;
         private Random rand = new Random();
         private WordPair currentWord;
@@ -44,6 +98,7 @@ namespace languageFlashCards
                 case Keys.Subtract:
                 case Keys.Escape:
                 case Keys.F5:
+                case Keys.NumPad0:
                     this.WindowState = FormWindowState.Minimized;
                     break;
 
@@ -62,25 +117,14 @@ namespace languageFlashCards
                     return;
 
                 case Keys.L:
-                    if (words == null || words.Count == 0) return;
+                    LevelWordsTo0();
+                    e.Handled = true;
+                    return;
 
-                    foreach (var word in words)
-                    {
-                        word.CorrectStreak = 0;
-
-                        var parts = allLines[word.RowIndex].Split('\t').ToList();
-
-                        while (parts.Count <= 12)
-                            parts.Add("");
-
-                        parts[12] = "0";
-
-                        allLines[word.RowIndex] = string.Join("\t", parts);
-                    }
-
-                    File.WriteAllLines(path, allLines);
-
-                    ShowNextWord();
+                // cycle languages with the backtick (`) / tilde (~) key
+                case Keys.Oem3:
+                    selectedLanguageIndex = (selectedLanguageIndex + 1) % languages.Count;
+                    LoadWords();
                     e.Handled = true;
                     return;
 
@@ -121,6 +165,30 @@ namespace languageFlashCards
             }
         }
 
+        private void LevelWordsTo0()
+        {
+            if (words == null || words.Count == 0 || currentLanguage == null) return;
+
+            for (int i = 0; i < words.Count; i++)
+            {
+                var word = words[i];
+                word.CorrectStreak = 0;
+
+                var parts = allLines[word.RowIndex].Split(currentLanguage.Delimiter).ToList();
+
+                while (parts.Count <= currentLanguage.StreakIndex)
+                    parts.Add("");
+
+                parts[currentLanguage.StreakIndex] = "0";
+
+                allLines[word.RowIndex] = string.Join(currentLanguage.Delimiter, parts);
+            }
+
+            File.WriteAllLines(currentLanguage.FilePath, allLines);
+
+            ShowNextWord();
+        }
+
         private void RemoveCurrentWord()
         {
             if (currentWord == null) return;
@@ -143,7 +211,7 @@ namespace languageFlashCards
             }
 
             // Rewrite file
-            File.WriteAllLines(path, allLines);
+            File.WriteAllLines(currentLanguage.FilePath, allLines);
 
             if (words.Count == 0)
             {
@@ -156,40 +224,52 @@ namespace languageFlashCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            words = LoadTsv(path);
-
-            ShowNextWord();
+            LoadWords();
         }
 
-        private List<WordPair> LoadTsv(string path)
+        private void LoadWords()
         {
-            allLines = File.ReadAllLines(path);
+            currentLanguage = languages[selectedLanguageIndex];
+            label1.Font = new Font(label1.Font.FontFamily,currentLanguage.TextSize,label1.Font.Style);
+            allLines = File.ReadAllLines(currentLanguage.FilePath);
             var list = new List<WordPair>();
 
-            for (int i = 1; i < allLines.Length; i++) // skip header
+            for (int i = 1; i < allLines.Length; i++)
             {
                 var line = allLines[i];
                 if (string.IsNullOrWhiteSpace(line)) continue;
 
-                var parts = line.Split('\t');
-                if (parts.Length < 6) continue;
+                var parts = line.Split(currentLanguage.Delimiter);
+
+                // determine required indices
+                int maxIndex = Math.Max(currentLanguage.ForeignIndex, currentLanguage.EnglishIndex);
+                if (currentLanguage.PronunciationIndex.HasValue)
+                    maxIndex = Math.Max(maxIndex, currentLanguage.PronunciationIndex.Value);
+
+                if (parts.Length <= maxIndex) continue;
 
                 int streak = 0;
-
-                if (parts.Length > 12 && int.TryParse(parts[12], out int parsed))
-                    streak = parsed;
+                if (parts.Length > currentLanguage.StreakIndex)
+                {
+                    if (int.TryParse(parts[currentLanguage.StreakIndex], out int parsed))
+                        streak = parsed;
+                }
 
                 list.Add(new WordPair
                 {
                     RowIndex = i,
-                    foreign = parts[3].Trim(),
-                    pronunciation = parts[4].Trim(),
-                    english = parts[5].Trim(),
+                    foreign = parts[currentLanguage.ForeignIndex].Trim(),
+                    pronunciation = currentLanguage.PronunciationIndex.HasValue && parts.Length > currentLanguage.PronunciationIndex.Value
+                        ? parts[currentLanguage.PronunciationIndex.Value].Trim()
+                        : string.Empty,
+                    english = parts[currentLanguage.EnglishIndex].Trim(),
                     CorrectStreak = streak
                 });
             }
 
-            return list;
+            words = list;
+
+            ShowNextWord();
         }
 
 
@@ -250,16 +330,16 @@ namespace languageFlashCards
 
         private void SaveProgress(WordPair word)
         {
-            var parts = allLines[word.RowIndex].Split('\t').ToList();
+            var parts = allLines[word.RowIndex].Split(currentLanguage.Delimiter).ToList();
 
-            while (parts.Count <= 12)
+            while (parts.Count <= currentLanguage.StreakIndex)
                 parts.Add("");
 
-            parts[12] = word.CorrectStreak.ToString();
+            parts[currentLanguage.StreakIndex] = word.CorrectStreak.ToString();
 
-            allLines[word.RowIndex] = string.Join("\t", parts);
+            allLines[word.RowIndex] = string.Join(currentLanguage.Delimiter, parts);
 
-            File.WriteAllLines(path, allLines);
+            File.WriteAllLines(currentLanguage.FilePath, allLines);
         }
 
     }
