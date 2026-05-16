@@ -89,6 +89,21 @@ namespace languageFlashCards
 
             this.KeyPreview = true; // important to let the form capture key presses
             this.KeyDown += Form1_KeyDown;
+
+            // Add mouse event handlers
+            this.MouseWheel += Form1_MouseWheel;
+        }
+
+        private void Form1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta < 0)
+            {
+                //choose(false);
+            }
+            else if (e.Delta > 0)
+            {
+                //choose(true);
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
