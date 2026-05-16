@@ -137,6 +137,15 @@ namespace languageFlashCards
                     this.Opacity = Math.Min(1.0, this.Opacity + 0.01);
                     e.Handled = true;
                     return;
+                case Keys.J:
+                    ChangeFontSize(-5);
+                    e.Handled = true;
+                    return;
+
+                case Keys.K:
+                    ChangeFontSize(5);
+                    e.Handled = true;
+                    return;
                 case Keys.PageDown:
                 case Keys.Right:
                     choose(true);
@@ -163,6 +172,20 @@ namespace languageFlashCards
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void ChangeFontSize(float amount)
+        {
+            float newSize = label1.Font.Size + amount;
+
+            // Prevent unusably small fonts
+            if (newSize < 5)
+                newSize = 5;
+
+            label1.Font = new Font(
+                label1.Font.FontFamily,
+                newSize,
+                label1.Font.Style);
         }
 
         private void LevelWordsTo0()

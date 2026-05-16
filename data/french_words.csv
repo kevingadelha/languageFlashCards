@@ -4,12 +4,10 @@ pas,not
 vous,you
 que,that/than
 et,and
-a,have,0
 on,we,1
 ça,it,1
 ai,have,0
 pour,for
-des,of the
 moi,me
 qui,who,1
 nous,we
@@ -29,7 +27,6 @@ sur,sure
 sais,know,1
 lui,him,1
 veux,want
-là,the
 dit,said/say,1
 es,are,0
 votre,your
@@ -63,7 +60,6 @@ quelque,some
 monde,world
 accord,agreement,1
 vu,seen,1
-aller,go
 trop,too much
 crois,think,1
 dois,have to,0
@@ -78,10 +74,7 @@ ses,his
 mal,wrong,1
 parler,speak
 eu,had,1
-sera,will be
-bonne,good
 dis,tell
-beaucoup,a lot
 voilà,here
 depuis,since,1
 doit,must,1
@@ -97,7 +90,6 @@ ouais,yeah,0
 pense,thought,1
 nos,our
 cela,it
-nuit,night
 merde,sh*t
 papa,dad
 reste,stay,0
@@ -125,7 +117,6 @@ raison,reason
 enfants,children
 assez,enough
 voulais,wanted,1
-sommes,are,0
 parle,speak
 toutes,all
 heure,hour
@@ -137,7 +128,7 @@ hommes,men
 connais,know
 gars,guys
 chance,luck,1
-sait,know
+sait,know,1
 part,share,0
 voiture,car,0
 pris,taken,1
@@ -148,7 +139,7 @@ travail,job
 sens,meaning
 allons,will go,1
 putain,whore,0
-ni,neither,0
+ni,neither,1
 revoir,meet again,1
 entendu,heard
 comprends,understand
@@ -163,7 +154,6 @@ demande,request,0
 sous,under,1
 pouvez,can
 voici,here is
-question,question
 venez,come,1
 rester,stay,1
 frère,brother
@@ -181,7 +171,7 @@ car,because,1
 chaque,each
 place,square
 main,hand,0
-ensemble,together
+ensemble,together,1
 pardon,sorry,1
 vers,towards,1
 aucun,none,0
@@ -194,10 +184,10 @@ mme,Mrs,1
 leurs,their,0
 étaient,were
 mettre,to put
-matin,morning
+matin,morning,1
 aide,help
 dessus,above,0
-sois,am,0
+sois,am,1
 genre,kind,0
 jeune,young,1
 enfant,child
@@ -249,7 +239,7 @@ dirait,would say,1
 plein,full,0
 mains,hands,1
 années,years,1
-dites,say
+dites,say,1
 manger,eat
 tour,tower
 plutôt,rather
@@ -290,7 +280,6 @@ ferme,closed,0
 plaisir,pleasure
 heureux,happy,0
 mot,word,1
-musique,music
 messieurs,gentlemen
 dedans,in,0
 fous,crazy,0
@@ -308,8 +297,8 @@ téléphone,phone
 pauvre,poor
 mlle,ms,1
 attend,waits
-drôle,funny,0
-ira,will go,0
+drôle,funny,1
+ira,will go,1
 parfois,sometimes,0
 l,the,0
 retour,return,0
@@ -322,7 +311,7 @@ mauvais,bad
 général,general,1
 faute,fault,1
 entends,hear,1
-bras,arms
+bras,arms,1
 fête,party,1
 café,coffee,0
 chéri,darling
@@ -330,8 +319,6 @@ sors,go outside
 gentil,nice,1
 vaut,worth,0
 malade,sick
-changer,change
-commence,begin
 entendre,hear,0
 travailler,to work,1
 partout,all over,0
@@ -379,7 +366,7 @@ serais,would be
 souvent,often,0
 sauf,except
 sûrement,surely
-étiez,were,0
+étiez,were,1
 or,gold,0
 ordre,order,1
 essayé,tried
@@ -439,7 +426,7 @@ erreur,error
 ailleurs,elsewhere,0
 rapport,report,0
 sac,bag
-cru,raw
+cru,raw,0
 allô,hello
 revenir,come back
 battre,beat,1
@@ -480,7 +467,7 @@ colonel,colonel
 âme,soul,0
 dos,back,0
 magnifique,magnificent
-rencontrer,meet
+rencontrer,meet,1
 réussi,successful,1
 rappelle,remember
 fut,was
@@ -527,7 +514,6 @@ suppose,Aassumed,1
 flics,cops,0
 avocat,lawyer,1
 jure,sworn,0
-sept,seven
 moitié,half,0
 aimé,love,1
 serez,will be,1
@@ -561,7 +547,7 @@ offre,offer,1
 envoie,send,1
 trou,hole
 arrière,back,1
-huit,eight,0
+huit,eight,1
 radio,radio
 ressemble,looks like,1
 change,exchange,1
@@ -602,7 +588,6 @@ sortie,exit,1
 boîte,box
 vol,flight,0
 lieutenant,lieutenant
-écouter,listen
 système,system
 époque,time,1
 retourne,return
@@ -632,7 +617,7 @@ salaud,b**tard
 plait,please,0
 cour,court,0
 juge,judge,0
-bruit,noise
+bruit,noise,1
 flic,cop
 tient,is holding,0
 terrible,terrible
@@ -679,8 +664,8 @@ fiche,plug,0
 parole,speech,0
 mecs,guys,0
 faisais,doing,1
-irai,will go
-devient,becomes
+irai,will go,1
+devient,becomes,0
 choisi,selected
 intéresse,interested
 rôle,role
@@ -688,11 +673,10 @@ félicitations,congratulations
 tourne,turned,1
 position,position
 sert,serves,0
-blessé,injured
+blessé,injured,0
 asseoir,seat
 environ,about,0
 mise,setting,0
-londres,London
 espoir,hope,1
 quitté,quits,1
 lequel,which,0
@@ -708,7 +692,7 @@ directeur,director
 parie,bet
 entrée,entrance
 conduire,drive
-revenu,returned
+revenu,returned,1
 expérience,experience
 cerveau,brain
 fenêtre,window,1
@@ -734,7 +718,6 @@ veuillez,please,0
 vide,empty,0
 responsable,responsible
 taxi,taxi
-excuse,excuse
 james,james
 fier,proud,1
 deuxième,second
@@ -770,7 +753,6 @@ certainement,certainly
 ha,ha
 importance,importance
 ouest,where is,1
-idées,ideas
 gagne,wins
 chat,cat
 ayez,have,1
@@ -836,14 +818,14 @@ offrir,to offer
 discuter,discuss
 permis,allowed,1
 bu,drank,0
-frais,fresh
+frais,fresh,1
 réunion,meeting,1
 toilettes,bathroom
 opération,surgery,1
 planète,planet
 viendra,will come
 champ,field
-pain,bread
+pain,bread,0
 excuser,excuse,1
 destin,destiny,1
 rends,thank,0
@@ -854,9 +836,9 @@ vaisseau,vessel,0
 sacré,sacred,1
 repas,meal,0
 contrat,contract,1
-qu,that,0
+qu,that,1
 nécessaire,necessary
-client,customer
+client,customer,1
 lait,milk
 iis,iis
 faite,done,1
@@ -879,7 +861,6 @@ apporté,brought,1
 mienne,mine,0
 procès,trial,0
 doux,soft
-eddie,eddie
 raconter,tell
 goût,taste
 amuser,amuse
@@ -894,7 +875,7 @@ marre,fed up,0
 travaillé,work,0
 retrouvé,found
 espace,space,1
-dise,tell
+dise,tell,1
 mérite,deserved,1
 lettres,letters
 accepter,accept
@@ -907,9 +888,8 @@ pièces,rooms,0
 forces,strengths
 énergie,energy
 rentré,returns
-alex,alex
 appartient,belongs
-propres,own
+propres,own,1
 regrette,sorry,1
 finalement,finally
 france,la France
@@ -933,7 +913,7 @@ cassé,broken,0
 doigts,fingers,1
 vérifier,check,1
 appareil,apparatus,1
-tirez,pull
+tirez,pull,0
 apporte,brings,1
 piste,track,1
 derniers,last,1
@@ -960,8 +940,8 @@ quelles,what
 souris,mouse,0
 regard,look
 cou,neck
-points,points
-proche,close
+points,points,1
+proche,close,1
 urgence,emergency,0
 folie,madness,1
 ancien,former,0
@@ -1002,11 +982,11 @@ campagne,campaign
 fermé,closed,1
 jerry,jerry
 répète,say again,1
-souhaite,wish
+souhaite,wish,0
 appelait,called
 attendant,waiting,1
 oû,egg (old French),0
-carrière,career,0
+carrière,career,1
 enlève,removes,0
 fatigué,tired
 suivi,followed,1
@@ -1022,8 +1002,8 @@ assure,assures,1
 obligé,forced,1
 martin,martin
 fusil,gun
-hasard,hazard
-pauvres,poor
+hasard,hazard,1
+pauvres,poor,1
 neige,snow
 parfaitement,perfectly,1
 journaux,newspapers,0
@@ -1080,7 +1060,7 @@ revenez,return,1
 autrement,other,0
 répondu,answered,1
 amené,bring,0
-os,bone,0
+os,bone,1
 perd,loses
 puissant,powerful
 fortune,fortune
@@ -1116,7 +1096,7 @@ côtés,sides,1
 marrant,funny,0
 comprend,comprises,0
 salon,living room,0
-lève,raise
+lève,raise,0
 utilise,uses
 attendent,wait,0
 conduit,pipe/drive,1
@@ -1138,7 +1118,6 @@ lance,spear,1
 usine,factory
 will,will
 champion,champion
-importante,important
 paroles,lyrics,0
 désormais,henceforth
 tres,very,1
@@ -1165,7 +1144,7 @@ vache,cow
 meme,even,0
 repos,rest,1
 rock,rock
-smith,smith
+smith,smith,1
 ombre,shadow,0
 minuit,midnight
 moyens,means,1
@@ -1180,7 +1159,7 @@ entré,enter,1
 billet,ticket
 moteur,engine,1
 réparer,to repair
-caché,hidden
+caché,hidden,1
 al,al
 riches,rich
 partager,share,1
@@ -1206,7 +1185,7 @@ Chair,flesh,0
 Angeles,angeles
 Rues,streets,1
 Utilize,in use,1
-reculez,step back
+reculez,step back,0
 japonais,Japanese,1
 mentir,lie
 rentrez,come back,1
