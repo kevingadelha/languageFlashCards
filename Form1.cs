@@ -38,6 +38,18 @@ namespace languageFlashCards
             new LanguageFileFormat
             {
                 // actual file in workspace: data\japanese working.tsv
+                FilePath =  @"C:\code\languageFlashCards\data\jp 2.tsv",
+                Delimiter = "\t",
+
+                ForeignIndex = 0,
+                PronunciationIndex = 2,
+                EnglishIndex = 1,
+                StreakIndex = 3,
+                TextSize = 150
+            },/*
+            new LanguageFileFormat
+            {
+                // actual file in workspace: data\japanese working.tsv
                 FilePath =  @"C:\code\languageFlashCards\data\japanese working.tsv",
                 Delimiter = "\t",
 
@@ -46,7 +58,7 @@ namespace languageFlashCards
                 EnglishIndex = 5,
                 StreakIndex = 12,
                 TextSize = 150
-            },/*
+            },*//*
             new LanguageFileFormat
             {
                 FilePath =  @"C:\code\languageFlashCards\data\japanese temp.psv",
@@ -92,6 +104,12 @@ namespace languageFlashCards
 
             // Add mouse event handlers
             this.MouseWheel += Form1_MouseWheel;
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+            this.Focus();
         }
 
         private void Form1_MouseWheel(object sender, MouseEventArgs e)
