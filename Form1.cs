@@ -179,6 +179,15 @@ namespace languageFlashCards
                     ChangeFontSize(5);
                     e.Handled = true;
                     return;
+
+                case Keys.I:
+                    int minStreak = words.Min(w => w.CorrectStreak);
+
+                    int candidateCount = words.Count(w => w.CorrectStreak == minStreak);
+
+                    MessageBox.Show(candidateCount.ToString());
+                    e.Handled = true;
+                    return;
                 case Keys.PageDown:
                 case Keys.Right:
                     choose(true);
@@ -200,7 +209,7 @@ namespace languageFlashCards
                 if (number == 0)
                     this.Opacity = 1.0;           // 100%
                 else
-                    this.Opacity = number / 10.0; // 10% - 90%
+                    this.Opacity = 0.2 + number / 20.0;
 
                 e.Handled = true;
                 return;
@@ -228,14 +237,14 @@ namespace languageFlashCards
             for (int i = 0; i < words.Count; i++)
             {
                 var word = words[i];
-                word.CorrectStreak = 0;
+                word.CorrectStreak = 1;
 
                 var parts = allLines[word.RowIndex].Split(currentLanguage.Delimiter).ToList();
 
                 while (parts.Count <= currentLanguage.StreakIndex)
                     parts.Add("");
 
-                parts[currentLanguage.StreakIndex] = "0";
+                parts[currentLanguage.StreakIndex] = "1";
 
                 allLines[word.RowIndex] = string.Join(currentLanguage.Delimiter, parts);
             }
