@@ -1,14 +1,14 @@
 import pandas as pd
 from pykakasi import kakasi
 
-input_path = r"C:\temp\Optimized Kore.xlsx"
-output_path = r"C:\temp\Optimized Kore_romaji.xlsx"
+input_path = r"C:\code\languageFlashCards\data\Optimized Kore.xlsx"
+output_path = r"C:\code\languageFlashCards\data\Optimized Kore examples_romaji.xlsx"
 
 # load file
 df = pd.read_excel(input_path)
 
 
-source_col = df.columns[8]   # I column
+source_col = df.columns[13]   # N column
 target_col = df.columns[10]   # K column
 
 kks = kakasi()

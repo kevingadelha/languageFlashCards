@@ -46,6 +46,18 @@ namespace languageFlashCards
                 EnglishIndex = 1,
                 StreakIndex = 3,
                 TextSize = 150
+            },
+            new LanguageFileFormat
+            {
+                // actual file in workspace: data\japanese working.tsv
+                FilePath =  @"C:\code\languageFlashCards\data\jp sentences.tsv",
+                Delimiter = "\t",
+
+                ForeignIndex = 1,
+                PronunciationIndex = 0,
+                EnglishIndex = 2,
+                StreakIndex = 3,
+                TextSize = 75
             },/*
             new LanguageFileFormat
             {
