@@ -3,8 +3,8 @@ pas,not,1
 que,that/than,1
 on,we,1
 ça,it,1
-ai,have,0
-pour,for
+ai,have,1
+pour,for,1
 qui,who,1
 y,there,1
 du,of the,1
@@ -15,27 +15,26 @@ va,go,1
 fait,fact/do/done,1
 as,ace,0
 faire,make,1
-sur,sure
+sur,sure,0
 sais,know,1
 lui,him,1
-veux,want
+veux,want,0
 dit,said/say,1
 es,are,1
-pourquoi,Why
 par,by,1
 son,his,1
 ton,your,1
 peux,can,1
 alors,so,1
 avez,have,1
-même,even,0
+même,even,1
 ont,have,1
 sa,her,1
 faut,must,1
 été,summer,1
 êtes,are,1
 ta,your,1
-fais,do
+fais,do,1
 peut,can,1
 encore,still/again,1
 mes,my,1
@@ -45,8 +44,7 @@ accord,agreement,1
 vu,seen,1
 trop,too much,1
 crois,think,1
-dois,have to,0
-père,father
+dois,have to,1
 sûr,sure,1
 aux,the,1
 leur,their,1
@@ -59,34 +57,31 @@ dis,tell,1
 voilà,here,1
 depuis,since,1
 doit,must,1
-mère,mother,0
 vois,see,1
 fille,girl,1
-gens,people
+gens,people,1
 soir,evening,1
-ouais,yeah,0
+ouais,yeah,1
 pense,thought,1
 nos,our,1
-cela,it
-merde,sh*t
+cela,it,1
 reste,stay,1
 peur,fear,0
 seul,alone,1
 arrive,come,1
 prendre,take,1
 regarde,look,1
-soit,is
+soit,is,1
 quelle,what,1
-passé,past,0
+passé,past,1
 plaît,please,1
 fils,son,1
 bas,low,1
 passe,past,1
-hé,hey
+hé,hey,0
 faites,make,1
 hein,huh,0
 raison,reason,1
-enfants,children
 assez,enough,1
 voulais,wanted,1
 parle,speak,1
@@ -95,8 +90,8 @@ puis,then,1
 tard,late,1
 dû,must have,1
 partir,go,1
-connais,know
-gars,guys,0
+connais,know,1
+gars,guys,1
 chance,luck,1
 sait,know,1
 part,share,0
@@ -108,32 +103,31 @@ venir,come,1
 travail,job,1
 sens,meaning,1
 allons,will go,1
-putain,whore,0
+putain,whore,1
 ni,neither,1
 revoir,meet again,1
 entendu,heard,1
 comprends,understand,1
-passer,pass
 pendant,while,1
 trouvé,find,1
 quelques,a few,1
 vient,come,1
 vieux,old,1
-attention,Warning,0
+attention,Warning,1
 demande,request,1
 sous,under,1
-pouvez,can
+pouvez,can,1
 voici,here is,1
 venez,come,1
 rester,stay,1
 fini,finished,1
-nouveau,new
+nouveau,new,1
 eux,them,1
 truc,thing,1
 tiens,like,0
 mois,month,1
 laisse,leash,0
-mec,guy,0
+mec,guy,1
 importe,matter,1
 car,because,1
 chaque,each,1
@@ -153,9 +147,9 @@ leurs,their,1
 mettre,to put,1
 matin,morning,1
 aide,help,1
-dessus,above,0
+dessus,above,1
 sois,am,1
-genre,kind,0
+genre,kind,1
 jeune,young,1
 donne,given,1
 venu,came,1
@@ -172,11 +166,11 @@ première,first,1
 aura,will have,1
 dernière,latest,1
 aucune,any/none,1
-mari,husband,0
+mari,husband,1
 enfin,finally,1
 madame,Mrs,1
-façon,way,0
-devrait,should
+façon,way,1
+devrait,should,1
 pourrais,could,1
 écoute,listening,1
 parti,left,1
@@ -185,29 +179,28 @@ endroit,place,1
 fou,crazy,1
 dont,of which,1
 espère,hope,1
-grande,great
-dehors,outside,0
+grande,great,1
+dehors,outside,1
 hier,yesterday,1
 boulot,job,0
-pensais,thought
+pensais,thought,1
 près,near,1
 chef,chief/chef,1
-h,h
 ainsi,so/thus,1
 haut,top,1
 demandé,request,1
 dirait,would say,1
-plein,full,0
+plein,full,1
 mains,hands,1
 années,years,1
 dites,say,1
 tour,tower,0
-plutôt,rather,0
-marche,market,0
+plutôt,rather,1
+marche,market,1
 semaine,week,1
-vérité,truth
+vérité,truth,1
 envie,desire,0
-capitaine,captain
+capitaine,captain,1
 affaires,business,1
 bientôt,soon,0
 vue,view,1
@@ -218,7 +211,7 @@ font,make,1
 tellement,so much,1
 voulait,wanted to,1
 meilleur,better,1
-journée,day,0
+journée,day,1
 attendre,expect,1
 confiance,trust,1
 garde,keep,1
@@ -235,58 +228,58 @@ cul,a**,0
 croyais,thought,1
 ferme,closed,1
 plaisir,pleasure,1
-heureux,happy,0
+heureux,happy,1
 mot,word,1
 messieurs,gentlemen,1
 dedans,in,1
 fous,crazy,1
 mariage,wedding,1
 rentrer,return,1
-ait,has,0
+ait,has,1
 lit,bed,1
 voit,sees,1
 autant,much,0
-reviens,come back,0
+reviens,come back,1
 parfait,perfect,1
 pauvre,poor,1
 mlle,ms,1
 attend,waits,1
 drôle,funny,1
 ira,will go,1
-parfois,sometimes,0
-retour,return,0
-verre,glass,0
+parfois,sometimes,1
+retour,return,1
+verre,glass,1
 ferai,will do/make,1
-maître,master,0
+maître,master,1
 mauvais,bad,1
 général,general,1
 faute,fault,1
 entends,hear,1
 bras,arms,1
 fête,party,1
-café,coffee,0
+café,coffee,1
 chéri,darling,1
-sors,go outside,0
+sors,go outside,1
 gentil,nice,1
 vaut,worth,0
 malade,sick,1
 entendre,hear,1
 travailler,to work,1
 partout,all over,1
-cher,expensive,0
+cher,expensive,1
 morts,dead,1
 rendre,return,1
 équipe,team,1
-esprit,mind,0
+esprit,mind,1
 rentre,returns,1
-veulent,want
+veulent,want,1
 montrer,show,1
 voulu,desired,1
-boire,to drink
+boire,to drink,1
 propre,clean,1
 état,state,1
 soyez,are,1
-bois,wood,0
+bois,wood,1
 t,you,1
 laissé,let go,1
 dès,from,1
@@ -298,7 +291,7 @@ tôt,early,0
 mets,put,1
 rêve,dream,1
 armée,army,1
-avis,opinion,0
+avis,opinion,1
 surtout,mostly,1
 ensuite,then,1
 pire,worst,1
@@ -319,22 +312,22 @@ or,gold,1
 ordre,order,1
 essayé,tried,1
 dîner,having dinner,1
-âge,age
-chemin,path,0
+âge,age,1
+chemin,path,1
 changé,exchange,1
-bout,end,0
+bout,end,1
 rue,street,1
-inquiète,worry
+inquiète,worry,0
 force,strength,1
 garder,keep,1
 tirer,shoot,1
 marché,market,0
-courant,current,0
+courant,current,1
 propos,about,1
 oublie,forget it,1
 con,dumb,0
 celle,that,1
-gauche,left,0
+gauche,left,1
 prix,price,1
 ferais,would do,1
 avion,plane,1
@@ -342,9 +335,9 @@ devenir,to become,1
 devoir,must do,1
 acheter,buy,1
 espèce,species,1
-gueule,mouth,0
+gueule,mouth,1
 début,beginning,1
-bouge,moves,0
+bouge,moves,1
 sort,go out,1
 grâce,grace,1
 message,message,1
@@ -364,12 +357,12 @@ devait,must have,1
 pars,leave,1
 pouvait,could,1
 armes,weapons,1
-fond,background,0
+fond,background,1
 erreur,error,1
 ailleurs,elsewhere,1
 rapport,report,1
 sac,bag,0
-cru,raw,0
+cru,raw,1
 allô,hello,1
 revenir,come back,1
 battre,beat,1
@@ -378,32 +371,32 @@ pieds,feet,1
 seras,will be,1
 carte,map,1
 jolie,pretty,1
-venue,came,0
-monte,mounted,0
-fallait,needed,0
+venue,came,1
+monte,mounted,1
+fallait,needed,1
 effet,effect,1
 seront,will be,1
 foutre,do,1
 bordel,mess,0
 mots,words,1
-neuf,new,0
+neuf,new,1
 tire,drawn,1
 lumière,light,1
 droite,right,1
 debout,standing,0
 cheval,horse,1
 joli,pretty,1
-loi,law
+loi,law,1
 entrez,come in,1
 auras,will have,1
 connaît,knows,1
 aviez,had,1
-dame,lady
-fric,money,0
+dame,lady,1
+fric,money,1
 retrouver,find,1
-coin,corner,0
+coin,corner,1
 colonel,colonel,1
-âme,soul,0
+âme,soul,1
 dos,back,0
 rencontrer,meet,1
 réussi,successful,1
@@ -420,27 +413,27 @@ clair,clear,1
 meurtre,murder,1
 heureuse,happy,1
 disais,said,1
-prêts,loans,0
+prêts,loans,1
 fasse,make,1
-puisse,can
+puisse,can,1
 déjeuner,lunch,1
 envoyé,sent,1
 disait,said,1
 tombe,falls,1
-su,knew,0
+su,knew,1
 déteste,hated,1
 forme,form,1
 â,a,1
-mauvaise,bad
+mauvaise,bad,1
 bord,edge,0
 mer,sea,1
 médecin,doctor,1
-midi,midday,0
+midi,midday,1
 devenu,become,1
 montre,watch,0
 porter,carry,1
-vraie,real
-disent,say
+vraie,real,1
+disent,say,1
 ferait,would,1
 ignore,ignore/unknown,1
 sortez,get out,1
@@ -467,17 +460,17 @@ selon,according to,1
 classe,class,1
 sorti,got out,1
 habitude,habit,1
-voie,way
+voie,way,0
 pote,mate,0
-honte,shame,0
+honte,shame,1
 rencontré,meet,1
-folle,crazy,0
+folle,crazy,1
 suivre,to follow,1
 oublier,forget,1
 aille,go,1
 offre,offer,1
 envoie,send,1
-trou,hole,0
+trou,hole,1
 arrière,back,1
 huit,eight,1
 ressemble,looks like,1
@@ -488,14 +481,14 @@ connu,known,1
 connard,a**hole,1
 pute,b*tch,1
 bande,gang,1
-enfer,hell
+enfer,hell,1
 tenez,hold,1
 rend,makes,1
 tel,such,1
 savait,knew,1
 plusieurs,many,1
 met,put,1
-compagnie,company
+compagnie,company,1
 devais,had to,1
 vit,lives,1
 combat,fight,1
@@ -504,7 +497,7 @@ aurez,will have,1
 conneries,bullsh**,0
 joué,play,1
 pourra,will be able to,1
-coucher,sleep,0
+coucher,sleep,1
 imagine,conceived,1
 continuer,carry on,1
 dirai,will tell,1
@@ -519,9 +512,9 @@ vol,flight,0
 époque,time,1
 retourne,return,1
 bête,stupid,0
-avenir,to come up,0
+avenir,to come up,1
 grands,great,1
-coups,shots,0
+coups,shots,1
 amoureux,lover,1
 envoyer,to send,1
 cuisine,cooked,1
@@ -529,18 +522,18 @@ ouvrir,open,1
 journal,newspaper,1
 faudra,will have to,1
 dommage,pity,0
-peau,skin,0
-pleine,full,0
+peau,skin,1
+pleine,full,1
 sympa,friendly,1
 héros,hero,1
 sergent,sergeant,1
-clé,key
+clé,key,1
 secondes,seconds,1
 nord,North,1
 salaud,b**tard,0
 plait,please,0
-cour,court,0
-juge,judge,0
+cour,court,1
+juge,judge,1
 bruit,noise,1
 flic,cop,0
 tient,is holding,1
@@ -550,8 +543,8 @@ thé,tea,1
 bonheur,happiness,1
 payé,paid,1
 tas,heap,0
-travers,through
-blague,joke,0
+travers,through,1
+blague,joke,1
 conseil,advice,1
 robe,dress,1
 tiré,drawn,1
@@ -566,12 +559,12 @@ gamin,kid,1
 tante,aunt,0
 croit,believes,1
 mesdames,ladies,1
-milieu,middle,0
+milieu,middle,1
 reine,queen,1
-dingue,crazy,0
+dingue,crazy,1
 sent,feels,1
 emmener,bring,0
-verra,will see,0
+verra,will see,1
 prise,taking,1
 vêtements,clothing,1
 liste,listing,1
@@ -583,7 +576,7 @@ acheté,bought,1
 laquelle,which,1
 fiche,plug,0
 parole,speech,0
-mecs,guys,0
+mecs,guys,1
 faisais,doing,1
 irai,will go,1
 devient,becomes,1
@@ -599,8 +592,8 @@ mise,setting,0
 espoir,hope,1
 quitté,quits,1
 lequel,which,1
-mur,wall
-peter,to fart,0
+mur,wall,1
+peter,to fart,1
 église,church,1
 salope,sl*t,0
 lâche,loose,0
@@ -613,7 +606,6 @@ cerveau,brain,1
 fenêtre,window,1
 quartier,district,1
 vis,screw,0
-venus,Venus
 soldats,soldiers,1
 riche,rich,1
 bill,bill,1
@@ -621,7 +613,7 @@ bill,bill,1
 ridicule,ridiculous,1
 ouvrez,open,1
 pourriez,might,1
-épouser,marry,0
+épouser,marry,1
 gosse,kid,1
 faudrait,should,1
 p,p,1
@@ -639,7 +631,7 @@ manière,way,1
 aimais,liked,1
 jambes,legs,0
 occasion,opportunity,1
-jeter,throw,0
+jeter,throw,1
 allée,driveway,0
 formidable,wonderful,1
 base,based,1
@@ -649,7 +641,7 @@ glace,ice,1
 parmi,among,1
 marié,married,1
 paie,pay,1
-nul,no,0
+nul,no,1
 vacances,holidays,1
 épouse,wife,1
 souvenir,memory,1
@@ -657,7 +649,7 @@ rendu,made,1
 course,race,0
 majesté,majesty,1
 mien,mine,1
-certainement,certainly
+certainement,certainly,1
 ha,ha
 ouest,where is,1
 gagne,wins,1
@@ -672,13 +664,12 @@ lorsque,when,1
 touché,touch,1
 bain,bath,1
 contente,content,1
-horrible,horrible
 retrouve,finds,1
 court,short,1
 dérange,disturbs,0
 bombe,bomb,1
-ramener,bring back,0
-certaines,some,0
+ramener,bring back,1
+certaines,some,1
 réalité,reality,1
 enquête,investigation,1
 foutu,rotten,0
@@ -705,7 +696,7 @@ zone,zoned,1
 charge,charge,1
 enfoiré,a**hole,0
 nourriture,food,1
-pont,bridge
+pont,bridge,1
 refuse,refuse,1
 contraire,opposite,1
 enchanté,nice to meet you,1
@@ -713,10 +704,10 @@ douleur,pain,1
 politique,policy,1
 faits,facts,1
 arrivera,to arrive at,1
-essaye,try
+essaye,try,1
 magasin,shop,1
 soient,are,1
-entier,full,0
+entier,full,1
 vécu,lived,0
 offrir,to offer,1
 discuter,discuss,1
@@ -724,9 +715,9 @@ permis,allowed,1
 bu,drank,1
 frais,fresh,1
 réunion,meeting,1
-toilettes,bathroom,0
+toilettes,bathroom,1
 opération,surgery,1
-viendra,will come,0
+viendra,will come,1
 champ,field,0
 pain,bread,0
 excuser,excuse,1
@@ -735,7 +726,7 @@ rends,thank,1
 découvert,discovered,1
 puisque,since,1
 taille,cut,0
-vaisseau,vessel,0
+vaisseau,vessel,1
 sacré,sacred,1
 repas,meal,0
 contrat,contract,1
@@ -749,22 +740,21 @@ copain,boyfriend,1
 personnel,staff,1
 mignon,cute,0
 couteau,knife,0
-sache,know,0
-foi,faith,0
+sache,know,1
+foi,faith,1
 dors,sleep,0
 remercie,thank,0
-direction,direction
 malin,clever,0
 niveau,level,1
 remettre,reset,0
 habite,lives,1
 apporté,brought,1
-mienne,mine,0
+mienne,mine,1
 procès,trial,0
-doux,soft,0
+doux,soft,1
 raconter,tell,1
-goût,taste
-amuser,amuse
+goût,taste,1
+amuser,amuse,1
 gosses,kids,1
 clients,customers,1
 enceinte,pregnant,0
@@ -780,11 +770,11 @@ quels,what,1
 failli,almost,0
 vitesse,speed,1
 jambe,leg,1
-rappeler,call back,0
+rappeler,call back,1
 pièces,rooms,0
-forces,strengths
-énergie,energy
-rentré,returns,0
+forces,strengths,1
+énergie,energy,1
+rentré,returns,1
 appartient,belongs,0
 propres,own,1
 regrette,sorry,1
@@ -801,7 +791,7 @@ lycée,high school,0
 fil,wire,1
 morceau,piece,1
 durant,during,1
-cassé,broken,0
+cassé,broken,1
 doigts,fingers,1
 vérifier,check,1
 appareil,apparatus,1
@@ -811,13 +801,13 @@ piste,track,1
 derniers,last,1
 troisième,third,1
 dépend,depends,1
-voitures,car
+voitures,car,0
 bougez,move,1
 belles,beautiful,1
 régler,adjust,1
 couper,cut,1
 entendez,hear,1
-aveugle,blinded
+aveugle,blinded,0
 bouger,move,1
 venait,was coming,1
 crise,crisis,1
@@ -827,10 +817,10 @@ lever,raise,1
 partons,leave,1
 clés,keywords,1
 récupérer,recover,1
-quelles,what
+quelles,what,1
 souris,mouse,1
 regard,look,1
-cou,neck
+cou,neck,0
 points,points,1
 proche,close,1
 urgence,emergency,1
@@ -838,12 +828,12 @@ folie,madness,1
 ancien,former,1
 relation,relationship,1
 bouteille,bottle,0
-étage,floor,0
+étage,floor,1
 rejoindre,join,1
-casse,broken,0
+casse,broken,1
 malgré,despite,0
 oiseau,bird,1
-méchant,bad,0
+méchant,bad,1
 pleure,cry,1
 meurt,dies,1
 claire,clear,1
@@ -865,9 +855,9 @@ crains,fear,0
 afin,in order to,1
 gare,station,0
 billets,tickets,1
-douce,soft,0
-étranger,foreign,0
-campagne,campaign
+douce,soft,1
+étranger,foreign,1
+campagne,campaign,1
 fermé,closed,1
 répète,say again,1
 souhaite,wish,0
@@ -876,13 +866,12 @@ oû,egg (old French),0
 carrière,career,1
 enlève,removes,0
 suivi,followed,1
-animal,animal
 raté,missed,0
-règle,rule,0
+règle,rule,1
 meurs,die,1
 remercier,thank,0
-queue,tail,0
-falloir,have to,0
+queue,tail,1
+falloir,have to,1
 suivant,following,1
 assure,assures,1
 obligé,forced,1
@@ -890,20 +879,20 @@ fusil,gun,1
 hasard,hazard,1
 pauvres,poor,1
 parfaitement,perfectly,1
-journaux,newspapers,0
+journaux,newspapers,1
 échapper,escape,1
 plage,beach,0
-crétin,dumba**
-aies,have,0
+crétin,dumba**,0
+aies,have,1
 vidéo,video,1
 coffre,chest,0
 pression,pressure,1
-costume,suit,0
+costume,suit,1
 informations,news,1
 futur,future,1
 auraient,would,1
-gardes,guards,0
-lis,Lily,0
+gardes,guards,1
+lis,Lily,1
 volonté,will,0
 attendu,expected,1
 verras,see,0
@@ -911,7 +900,7 @@ donnez,give,1
 demandais,asked,1
 excuses,apology,1
 vienne,Vienna,1
-faible,low,0
+faible,low,1
 cache,hidden,0
 fiston,son,0
 attraper,to catch,1
@@ -931,10 +920,9 @@ connaissance,knowledge,1
 voulons,want to,1
 certaine,some,1
 couple,couple,1
-rome,Rome
 entend,hears,1
 resté,stayed,1
-montez,mount,0
+montez,mount,1
 couilles,balls,0
 revenez,return,1
 autrement,other,1
@@ -943,28 +931,27 @@ amené,bring,0
 os,bone,1
 perd,loses,1
 puissant,powerful,0
-major,staff,0
+major,staff,1
 amener,lead,0
 prépare,prepare,1
 embrasser,to kiss,0
 genoux,knees,0
 détruit,destroy,1
 célèbre,popular,1
-cible,target,0
+cible,target,1
 conscience,consciousness,1
-prévenir,warn,0
+prévenir,warn,1
 ramène,brings back,0
 arrivés,arrived,1
 doigt,finger,1
-article,article
 reprendre,resume,1
 mine,appearance,0
-regardes,look
+regardes,look,1
 servi,served,1
 reposer,rest,1
 couché,layer,0
 gardez,keep,1
-agréable,pleasant
+agréable,pleasant,1
 château,castle,1
 bal,ball,1
 apparemment,apparently,1
@@ -972,7 +959,7 @@ l’os,the bone,1
 côtés,sides,1
 marrant,funny,0
 comprend,comprises,0
-salon,living room,0
+salon,living room,1
 lève,raise,1
 attendent,wait,1
 conduit,pipe/drive,1
@@ -988,46 +975,44 @@ aise,ease,0
 emmerde,hassle,0
 joindre,join,1
 lance,spear,1
-usine,factory,0
+usine,factory,1
 paroles,lyrics,0
 désormais,henceforth,0
 tres,very,1
 dernières,latest,1
 extérieur,outside,1
-désert,desert
+désert,desert,1
 coupé,chopped off,1
 aide,help,1
 dira,tell,1
-comptes,accounts,0
-mode,fashion,0
+comptes,accounts,1
+mode,fashion,1
 parlais,speaking,1
 invités,guests,1
-pis,udder,0
+pis,udder,1
 sage,wise,1
-rappelles,remember,0
+rappelles,remember,1
 grandi,grown up,1
 pousse,shoot,0
 vache,cow,1
 meme,even,1
 repos,rest,1
-rock,rock
 smith,smith,1
 ombre,shadow,0
-minuit,midnight,0
+minuit,midnight,1
 moyens,means,1
 nombreux,numerous,1
 également,also,1
-mince,slim,0
+mince,slim,1
 dormi,slept,1
 essence,gasoline,0
 maire,mayor,1
 faisant,making,1
 entré,enter,1
-billet,ticket,0
+billet,ticket,1
 moteur,engine,1
 réparer,to repair,1
 caché,hidden,1
-al,al
 riches,rich,1
 partager,share,1
 trouvée,found,1
@@ -1037,18 +1022,18 @@ hiver,winter,1
 reviendra,will come back,1
 haute,high,1
 senti,felt,1
-lac,lake,0
+lac,lake,1
 jeté,thrown,1
-souvenirs,memories,0
-sommeil,sleep,0
+souvenirs,memories,1
+sommeil,sleep,1
 vrais,real,1
 réveiller,wake,0
-casser,break,0
+casser,break,1
 courses,racing,0
 fantôme,ghost,1
 passez,skip,1
 battu,beaten,1
-Chair,flesh,0
+Chair,flesh,1
 Rues,streets,1
 Utilize,in use,1
 reculez,step back,0
@@ -1057,11 +1042,11 @@ rentrez,come back,1
 pète,break,0
 offert,free,0
 semblant,show,0
-annonce,ad,0
+annonce,ad,1
 Paye,paid,1
 premiers,first,1
 débarrasser,get rid of,0
 fuir,to run away,1
 Supplie,beseech,1
 saute,jumped up,1
-Signer,sign
+Signer,sign,1

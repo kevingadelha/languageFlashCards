@@ -23,14 +23,12 @@ namespace languageFlashCards
         {
             public string FilePath { get; init; }
             public string Delimiter { get; init; }
-
             public int ForeignIndex { get; init; }
             public int? PronunciationIndex { get; init; }
             public int EnglishIndex { get; init; }
-
             public int StreakIndex { get; init; }
-
             public int TextSize { get; init; }
+            public bool ShowPronunciationByDefault { get; init; }
         }
 
         public static readonly List<LanguageFileFormat> languages = new()
@@ -45,7 +43,8 @@ namespace languageFlashCards
                 PronunciationIndex = 2,
                 EnglishIndex = 1,
                 StreakIndex = 3,
-                TextSize = 150
+                TextSize = 175,
+                ShowPronunciationByDefault = false
             },
             new LanguageFileFormat
             {
@@ -57,7 +56,8 @@ namespace languageFlashCards
                 PronunciationIndex = 0,
                 EnglishIndex = 2,
                 StreakIndex = 3,
-                TextSize = 75
+                TextSize = 105,
+                ShowPronunciationByDefault = true
             },/*
             new LanguageFileFormat
             {
@@ -92,7 +92,8 @@ namespace languageFlashCards
                 PronunciationIndex = null,
                 EnglishIndex = 1,
                 StreakIndex = 2,
-                TextSize = 48
+                TextSize = 60,
+                ShowPronunciationByDefault = false
             }
         };
 
@@ -106,6 +107,7 @@ namespace languageFlashCards
         private WordPair currentWord;
         private WordPair previousWord;
         private bool isClicked = false;
+        private string completeAnswer = string.Empty;
 
         public Form1()
         {
@@ -378,12 +380,22 @@ namespace languageFlashCards
 
             label1.Text = currentWord.foreign;
 
-            label2.Text = string.IsNullOrEmpty(currentWord.pronunciation)
+            label2.Visible = false;
+
+            completeAnswer = string.IsNullOrEmpty(currentWord.pronunciation)
             ? currentWord.english
             : $"{currentWord.pronunciation}{Environment.NewLine}{Environment.NewLine}{currentWord.english}";
 
+            if (!currentLanguage.ShowPronunciationByDefault)
+            {
+                label2.Text = completeAnswer;
+            }
+            else if (!string.IsNullOrEmpty(currentWord.pronunciation))
+            {
+                label2.Text = currentWord.pronunciation;
+                label2.Visible = true;
+            }
             isClicked = false;
-            label2.Visible = false;
 
         }
 
@@ -392,6 +404,7 @@ namespace languageFlashCards
             if (!isClicked)
             {
                 isClicked = true;
+                label2.Text = completeAnswer;
                 label2.Visible = true;
                 return;
             }
