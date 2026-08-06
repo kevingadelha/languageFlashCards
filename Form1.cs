@@ -169,7 +169,7 @@ namespace languageFlashCards
                     return;
 
                 // cycle languages with the backtick (`) / tilde (~) key
-                case Keys.Oem3:
+                case Keys.Tab:
                     selectedLanguageIndex = (selectedLanguageIndex + 1) % languages.Count;
                     LoadWords();
                     e.Handled = true;
