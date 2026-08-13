@@ -18,6 +18,7 @@ namespace languageFlashCards
             public string pronunciation { get; set; }
             public string english { get; set; }
             public int CorrectStreak { get; set; }
+            public string additionalInfo { get; set; }
         }
         public class LanguageFileFormat
         {
@@ -29,11 +30,26 @@ namespace languageFlashCards
             public int StreakIndex { get; init; }
             public int TextSize { get; init; }
             public bool ShowPronunciationByDefault { get; init; }
+            public int[]? AdditionalInfoIndexes { get; init; }
         }
 
         public static readonly List<LanguageFileFormat> languages = new()
         {
+            
             new LanguageFileFormat
+            {
+                FilePath =  @"C:\code\languageFlashCards\data\jp.tsv",
+                Delimiter = "\t",
+
+                ForeignIndex = 0,
+                PronunciationIndex = 2,
+                EnglishIndex = 3,
+                StreakIndex = 11,
+                TextSize = 175,
+                ShowPronunciationByDefault = false,
+                AdditionalInfoIndexes = new[] { 2, 3, 4, 6, 5 }
+            },
+           /* new LanguageFileFormat
             {
                 // actual file in workspace: data\japanese working.tsv
                 FilePath =  @"C:\code\languageFlashCards\data\jp 2.tsv",
@@ -44,8 +60,9 @@ namespace languageFlashCards
                 EnglishIndex = 1,
                 StreakIndex = 3,
                 TextSize = 175,
-                ShowPronunciationByDefault = false
-            },
+                ShowPronunciationByDefault = false,
+                AdditionalInfoIndexes = null
+            },*/
             new LanguageFileFormat
             {
                 // actual file in workspace: data\japanese working.tsv
@@ -57,7 +74,8 @@ namespace languageFlashCards
                 EnglishIndex = 2,
                 StreakIndex = 3,
                 TextSize = 105,
-                ShowPronunciationByDefault = true
+                ShowPronunciationByDefault = true,
+                AdditionalInfoIndexes = null
             },/*
             new LanguageFileFormat
             {
@@ -93,7 +111,8 @@ namespace languageFlashCards
                 EnglishIndex = 1,
                 StreakIndex = 2,
                 TextSize = 60,
-                ShowPronunciationByDefault = false
+                ShowPronunciationByDefault = false,
+                AdditionalInfoIndexes = null
             }
         };
 
@@ -165,6 +184,15 @@ namespace languageFlashCards
 
                 case Keys.L:
                     LevelWordsTo0();
+                    e.Handled = true;
+                    return;
+
+                case Keys.H:
+                    if (currentWord == null || string.IsNullOrEmpty(currentWord.additionalInfo))
+                        return;
+
+                    label2.Text = currentWord.additionalInfo;
+                    label2.Visible = true;
                     e.Handled = true;
                     return;
 
@@ -324,6 +352,8 @@ namespace languageFlashCards
                 int maxIndex = Math.Max(currentLanguage.ForeignIndex, currentLanguage.EnglishIndex);
                 if (currentLanguage.PronunciationIndex.HasValue)
                     maxIndex = Math.Max(maxIndex, currentLanguage.PronunciationIndex.Value);
+                if (currentLanguage.AdditionalInfoIndexes != null && currentLanguage.AdditionalInfoIndexes.Length > 0)
+                    maxIndex = Math.Max(maxIndex, currentLanguage.AdditionalInfoIndexes.Max());
 
                 if (parts.Length <= maxIndex) continue;
 
@@ -334,6 +364,21 @@ namespace languageFlashCards
                         streak = parsed;
                 }
 
+                // Build additional info from specified indexes
+                string additionalInfo = string.Empty;
+                if (currentLanguage.AdditionalInfoIndexes != null && currentLanguage.AdditionalInfoIndexes.Length > 0)
+                {
+                    var infoParts = new List<string>();
+                    foreach (int idx in currentLanguage.AdditionalInfoIndexes)
+                    {
+                        if (idx < parts.Length)
+                        {
+                            infoParts.Add(parts[idx].Trim());
+                        }
+                    }
+                    additionalInfo = string.Join(Environment.NewLine, infoParts);
+                }
+
                 list.Add(new WordPair
                 {
                     RowIndex = i,
@@ -342,7 +387,8 @@ namespace languageFlashCards
                         ? parts[currentLanguage.PronunciationIndex.Value].Trim()
                         : string.Empty,
                     english = parts[currentLanguage.EnglishIndex].Trim(),
-                    CorrectStreak = streak
+                    CorrectStreak = streak,
+                    additionalInfo = additionalInfo
                 });
             }
 

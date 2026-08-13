@@ -1,31 +1,32 @@
 import pandas as pd
 from pykakasi import kakasi
 
-input_path = r"C:\code\languageFlashCards\data\Optimized Kore.xlsx"
-output_path = r"C:\code\languageFlashCards\data\Optimized Kore examples_romaji.xlsx"
+input_path = r"C:\temp\Japanese Core Vocab.tsv"
+output_path = r"C:\temp\jp.tsv"
 
-# load file
-df = pd.read_excel(input_path)
+# Load TSV file
+df = pd.read_csv(input_path, sep="\t", dtype=str, keep_default_na=False)
 
+# Third column (0-based indexing)
+target_col = df.columns[2]
 
-source_col = df.columns[13]   # N column
-target_col = df.columns[10]   # K column
-
+# Set up pykakasi
 kks = kakasi()
-kks.setMode("H", "a")  # Hiragana -> ascii
-kks.setMode("K", "a")  # Katakana -> ascii
-kks.setMode("J", "a")  # Kanji -> ascii
+kks.setMode("H", "a")  # Hiragana -> romaji
+kks.setMode("K", "a")  # Katakana -> romaji
+kks.setMode("J", "a")  # Kanji -> romaji
 kks.setMode("r", "Hepburn")
 converter = kks.getConverter()
 
 def to_romaji(text):
-    if pd.isna(text):
+    if not text:
         return text
-    return converter.do(str(text))
+    return converter.do(text)
 
-# write into existing K column (overwrite)
-df[target_col] = df[source_col].apply(to_romaji)
+# Convert the third column in place
+df[target_col] = df[target_col].apply(to_romaji)
 
-df.to_excel(output_path, index=False)
+# Save back to TSV
+df.to_csv(output_path, sep="\t", index=False)
 
 print("Done:", output_path)
