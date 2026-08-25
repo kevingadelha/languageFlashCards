@@ -49,57 +49,6 @@ namespace languageFlashCards
                 ShowPronunciationByDefault = false,
                 AdditionalInfoIndexes = new[] { 2, 3, 4, 6, 5 }
             },
-           /* new LanguageFileFormat
-            {
-                // actual file in workspace: data\japanese working.tsv
-                FilePath =  @"C:\code\languageFlashCards\data\jp 2.tsv",
-                Delimiter = "\t",
-
-                ForeignIndex = 0,
-                PronunciationIndex = 2,
-                EnglishIndex = 1,
-                StreakIndex = 3,
-                TextSize = 175,
-                ShowPronunciationByDefault = false,
-                AdditionalInfoIndexes = null
-            },*/
-            new LanguageFileFormat
-            {
-                // actual file in workspace: data\japanese working.tsv
-                FilePath =  @"C:\code\languageFlashCards\data\jp sentences.tsv",
-                Delimiter = "\t",
-
-                ForeignIndex = 1,
-                PronunciationIndex = 0,
-                EnglishIndex = 2,
-                StreakIndex = 3,
-                TextSize = 105,
-                ShowPronunciationByDefault = true,
-                AdditionalInfoIndexes = null
-            },/*
-            new LanguageFileFormat
-            {
-                // actual file in workspace: data\japanese working.tsv
-                FilePath =  @"C:\code\languageFlashCards\data\japanese working.tsv",
-                Delimiter = "\t",
-
-                ForeignIndex = 3,
-                PronunciationIndex = 4,
-                EnglishIndex = 5,
-                StreakIndex = 12,
-                TextSize = 150
-            },*//*
-            new LanguageFileFormat
-            {
-                FilePath =  @"C:\code\languageFlashCards\data\japanese temp.psv",
-                Delimiter = "|",
-
-                ForeignIndex = 0,
-                PronunciationIndex = 1,
-                EnglishIndex = 2,
-                StreakIndex = 3,
-                TextSize = 100
-            },*/
             new LanguageFileFormat
             {
                 // actual file in workspace: data\french_words.csv
@@ -183,7 +132,12 @@ namespace languageFlashCards
                     return;
 
                 case Keys.L:
-                    LevelWordsTo0();
+                    LevelWordsTo(1);
+                    e.Handled = true;
+                    return;
+
+                case Keys.O:
+                    LevelWordsTo(2);
                     e.Handled = true;
                     return;
 
@@ -272,21 +226,21 @@ namespace languageFlashCards
                 label1.Font.Style);
         }
 
-        private void LevelWordsTo0()
+        private void LevelWordsTo(int level)
         {
             if (words == null || words.Count == 0 || currentLanguage == null) return;
 
             for (int i = 0; i < words.Count; i++)
             {
                 var word = words[i];
-                word.CorrectStreak = 1;
+                word.CorrectStreak = level;
 
                 var parts = allLines[word.RowIndex].Split(currentLanguage.Delimiter).ToList();
 
                 while (parts.Count <= currentLanguage.StreakIndex)
                     parts.Add("");
 
-                parts[currentLanguage.StreakIndex] = "1";
+                parts[currentLanguage.StreakIndex] = level.ToString();
 
                 allLines[word.RowIndex] = string.Join(currentLanguage.Delimiter, parts);
             }
@@ -369,11 +323,17 @@ namespace languageFlashCards
                 if (currentLanguage.AdditionalInfoIndexes != null && currentLanguage.AdditionalInfoIndexes.Length > 0)
                 {
                     var infoParts = new List<string>();
+
                     foreach (int idx in currentLanguage.AdditionalInfoIndexes)
                     {
                         if (idx < parts.Length)
                         {
-                            infoParts.Add(parts[idx].Trim());
+                            string part = parts[idx].Trim();
+
+                            if (!string.IsNullOrEmpty(part))
+                            {
+                                infoParts.Add(part);
+                            }
                         }
                     }
                     additionalInfo = string.Join(Environment.NewLine, infoParts);
